@@ -138,14 +138,21 @@ class DashboardApp {
     }
 
     async switchScenario(scenarioId) {
-        if (this.currentScenario === scenarioId) return;
-        
-        console.log(`Switching to scenario: ${scenarioId}`);
-        this.currentScenario = scenarioId;
-        
-        // Emit event for all modules
-        this.eventBus.emit(DASHBOARD_EVENTS.SCENARIO_CHANGED, scenarioId);
+    if (this.currentScenario === scenarioId) return;
+
+    console.log(`[App] Switching to scenario: ${scenarioId}`);
+    this.currentScenario = scenarioId;
+
+    // Update the select element to reflect the change
+    const scenarioSelect = document.getElementById('scenarioSelect');
+    if (scenarioSelect) {
+        scenarioSelect.value = scenarioId;
     }
+
+    // Emit event for all modules
+    this.eventBus.emit(DASHBOARD_EVENTS.SCENARIO_CHANGED, scenarioId);
+    console.log(`[App] Emitted SCENARIO_CHANGED event for scenario: ${scenarioId}`);
+}
 
     async refreshData() {
         console.log('Refreshing all data...');

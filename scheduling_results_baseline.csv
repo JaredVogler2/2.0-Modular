@@ -1,0 +1,435 @@
+task_id,task_num,task_type,display_name,product_line,team,scheduled_start,scheduled_end,duration_minutes,mechanics_required,slack_hours,priority_score,shift,global_priority
+E_1,1,Production,Task 1,Product E,Mechanic Team 1,2025-08-22 06:00:00,2025-08-22 06:30:00,30,1,505.2,44061.0,1st,1
+E_402,402,Rework,Rework 402,Product E,Mechanic Team 1,2025-08-22 06:00:00,2025-08-22 06:45:00,45,1,655.45,-500.0,1st,2
+E_23,23,Production,Task 23,Product E,Mechanic Team 5,2025-08-22 06:00:00,2025-08-22 06:30:00,30,1,659.95,46608.0,1st,3
+C_50,50,Production,Task 50,Product C,Mechanic Team 3,2025-08-22 06:00:00,2025-08-22 07:00:00,60,2,749.5,47450.0,1st,4
+E_19,19,Production,Task 19,Product E,Mechanic Team 5,2025-08-22 06:00:00,2025-08-22 06:20:00,20,1,755.75,47785.0,1st,5
+B_75,75,Production,Task 75,Product B,Mechanic Team 1,2025-08-22 06:00:00,2025-08-22 06:30:00,30,1,769.5,49811.0,1st,6
+B_79,79,Production,Task 79,Product B,Mechanic Team 3,2025-08-22 06:00:00,2025-08-22 06:40:00,40,1,782.25,50584.0,1st,7
+E_44,44,Production,Task 44,Product E,Mechanic Team 5,2025-08-22 06:00:00,2025-08-22 07:30:00,90,3,800.5,47424.0,1st,8
+D_405,405,Rework,Rework 405,Product D,Mechanic Team 3,2025-08-22 06:00:00,2025-08-22 07:15:00,75,2,808.0,-500.0,1st,9
+C_408,408,Rework,Rework 408,Product C,Mechanic Team 1,2025-08-22 06:00:00,2025-08-22 06:40:00,40,1,813.45,-500.0,1st,10
+D_29,29,Production,Task 29,Product D,Mechanic Team 5,2025-08-22 06:00:00,2025-08-22 06:40:00,40,1,818.45,46816.0,1st,11
+D_26,26,Production,Task 26,Product D,Mechanic Team 1,2025-08-22 06:00:00,2025-08-22 07:00:00,60,2,863.7,47537.0,1st,12
+D_31,31,Production,Task 31,Product D,Mechanic Team 1,2025-08-22 06:00:00,2025-08-22 06:30:00,30,1,869.7,47918.0,1st,13
+D_40,40,Production,Task 40,Product D,Mechanic Team 3,2025-08-22 06:00:00,2025-08-22 08:00:00,120,4,893.5,47078.0,1st,14
+D_44,44,Production,Task 44,Product D,Mechanic Team 5,2025-08-22 06:00:00,2025-08-22 07:30:00,90,3,896.5,47384.0,1st,15
+D_52,52,Production,Task 52,Product D,Mechanic Team 1,2025-08-22 06:00:00,2025-08-22 07:30:00,90,3,942.75,48059.0,1st,16
+E_101,101,Quality Inspection,QI for Task 1,Product E,Quality Team 2,2025-08-22 06:30:00,2025-08-22 07:15:00,45,1,506.95,-1000.0,1st,17
+B_175,175,Quality Inspection,QI for Task 75,Product B,Quality Team 1,2025-08-22 06:30:00,2025-08-22 07:15:00,45,1,771.25,-1000.0,1st,18
+E_52,52,Production,Task 52,Product E,Mechanic Team 1,2025-08-22 06:30:00,2025-08-22 08:00:00,90,3,846.25,48099.0,1st,19
+C_10408,10408,Quality Inspection,QI for Task 408,Product C,Quality Team 1,2025-08-22 06:40:00,2025-08-22 07:10:00,30,1,814.2833333333333,-1000.0,1st,20
+D_41,41,Production,Task 41,Product D,Mechanic Team 1,2025-08-22 06:40:00,2025-08-22 07:00:00,20,1,869.0333333333333,47970.0,1st,21
+D_72,72,Production,Task 72,Product D,Mechanic Team 5,2025-08-22 06:40:00,2025-08-22 08:40:00,120,4,970.5833333333334,48728.0,1st,22
+E_10402,10402,Quality Inspection,QI for Task 402,Product E,Quality Team 2,2025-08-22 06:45:00,2025-08-22 07:15:00,30,1,656.2,-1000.0,1st,23
+C_61,61,Production,Task 61,Product C,Mechanic Team 1,2025-08-22 06:45:00,2025-08-22 07:25:00,40,1,791.75,49126.0,1st,24
+C_150,150,Quality Inspection,QI for Task 50,Product C,Quality Team 3,2025-08-22 07:00:00,2025-08-22 07:45:00,45,1,750.75,-1000.0,2nd,25
+D_35,35,Production,Task 35,Product D,Mechanic Team 3,2025-08-22 07:00:00,2025-08-22 07:50:00,50,1,897.25,47842.0,1st,26
+D_45,45,Production,Task 45,Product D,Mechanic Team 3,2025-08-22 07:00:00,2025-08-22 07:50:00,50,1,899.5,48064.0,1st,27
+C_407,407,Rework,Rework 407,Product C,Mechanic Team 1,2025-08-22 07:10:00,2025-08-22 08:00:00,50,1,816.2833333333333,-500.0,1st,28
+E_401,401,Rework,Rework 401,Product E,Mechanic Team 1,2025-08-22 07:15:00,2025-08-22 08:15:00,60,2,658.7,-500.0,1st,29
+D_10405,10405,Quality Inspection,QI for Task 405,Product D,Quality Team 2,2025-08-22 07:15:00,2025-08-22 07:45:00,30,1,808.25,-1000.0,1st,30
+D_60,60,Production,Task 60,Product D,Mechanic Team 3,2025-08-22 07:15:00,2025-08-22 08:45:00,90,3,960.25,48359.0,1st,31
+C_52,52,Production,Task 52,Product C,Mechanic Team 1,2025-08-22 07:30:00,2025-08-22 09:00:00,90,3,797.25,48119.0,1st,32
+E_144,144,Quality Inspection,QI for Task 44,Product E,Quality Team 4,2025-08-22 07:30:00,2025-08-22 08:15:00,45,2,801.25,-1000.0,3rd,33
+C_58,58,Production,Task 58,Product C,Mechanic Team 5,2025-08-22 07:30:00,2025-08-22 08:30:00,60,2,832.0,48950.0,1st,34
+E_72,72,Production,Task 72,Product E,Mechanic Team 5,2025-08-22 07:30:00,2025-08-22 09:30:00,120,4,873.75,48768.0,1st,35
+D_144,144,Quality Inspection,QI for Task 44,Product D,Quality Team 2,2025-08-22 07:30:00,2025-08-22 08:15:00,45,2,897.25,-1000.0,1st,36
+D_404,404,Rework,Rework 404,Product D,Mechanic Team 3,2025-08-22 07:45:00,2025-08-22 08:15:00,30,1,809.25,-500.0,1st,37
+D_135,135,Quality Inspection,QI for Task 35,Product D,Quality Team 3,2025-08-22 07:50:00,2025-08-22 08:35:00,45,1,898.6666666666666,-1000.0,2nd,38
+C_60,60,Production,Task 60,Product C,Mechanic Team 3,2025-08-22 08:00:00,2025-08-22 09:30:00,90,3,815.5,48419.0,1st,39
+C_10407,10407,Quality Inspection,QI for Task 407,Product C,Quality Team 2,2025-08-22 08:00:00,2025-08-22 08:30:00,30,1,816.95,-1000.0,1st,40
+E_60,60,Production,Task 60,Product E,Mechanic Team 3,2025-08-22 08:00:00,2025-08-22 09:30:00,90,3,863.5,48399.0,1st,41
+D_140,140,Quality Inspection,QI for Task 40,Product D,Quality Team 3,2025-08-22 08:00:00,2025-08-22 08:45:00,45,2,893.75,-1000.0,2nd,42
+D_36,36,Production,Task 36,Product D,Mechanic Team 1,2025-08-22 08:00:00,2025-08-22 09:30:00,90,3,925.45,48229.0,1st,43
+D_46,46,Production,Task 46,Product D,Mechanic Team 1,2025-08-22 08:00:00,2025-08-22 09:00:00,60,2,927.7,48607.0,1st,44
+E_10401,10401,Quality Inspection,QI for Task 401,Product E,Quality Team 1,2025-08-22 08:15:00,2025-08-22 08:45:00,30,1,659.2,-1000.0,1st,45
+D_10404,10404,Quality Inspection,QI for Task 404,Product D,Quality Team 1,2025-08-22 08:15:00,2025-08-22 08:45:00,30,1,810.25,-1000.0,1st,46
+E_152,152,Quality Inspection,QI for Task 52,Product E,Quality Team 4,2025-08-22 08:15:00,2025-08-22 09:00:00,45,2,846.75,-1000.0,3rd,47
+D_152,152,Quality Inspection,QI for Task 52,Product D,Quality Team 2,2025-08-22 08:15:00,2025-08-22 09:00:00,45,2,942.75,-1000.0,1st,48
+C_55,55,Production,Task 55,Product C,Mechanic Team 5,2025-08-22 08:30:00,2025-08-22 09:26:00,56,2,819.25,48970.8,1st,49
+C_158,158,Quality Inspection,QI for Task 58,Product C,Quality Team 2,2025-08-22 08:30:00,2025-08-22 09:15:00,45,1,833.25,-1000.0,1st,50
+C_72,72,Production,Task 72,Product C,Mechanic Team 5,2025-08-22 08:40:00,2025-08-22 10:40:00,120,4,824.5833333333334,48788.0,1st,51
+D_30,30,Production,Task 30,Product D,Mechanic Team 3,2025-08-22 08:45:00,2025-08-22 09:45:00,60,2,812.75,46715.0,1st,52
+D_160,160,Quality Inspection,QI for Task 60,Product D,Quality Team 3,2025-08-22 08:45:00,2025-08-22 09:30:00,45,2,961.0,-1000.0,2nd,53
+C_152,152,Quality Inspection,QI for Task 52,Product C,Quality Team 1,2025-08-22 09:00:00,2025-08-22 09:45:00,45,2,798.0,-1000.0,1st,54
+E_68,68,Production,Task 68,Product E,Mechanic Team 1,2025-08-22 09:00:00,2025-08-22 10:30:00,90,3,878.5,48774.0,1st,55
+D_68,68,Production,Task 68,Product D,Mechanic Team 1,2025-08-22 09:00:00,2025-08-22 10:30:00,90,3,974.5,48734.0,1st,56
+C_155,155,Quality Inspection,QI for Task 55,Product C,Quality Team 2,2025-08-22 09:26:00,2025-08-22 10:11:00,45,1,820.5666666666667,-1000.0,1st,57
+C_68,68,Production,Task 68,Product C,Mechanic Team 1,2025-08-22 09:30:00,2025-08-22 11:00:00,90,3,830.0,48794.0,1st,58
+E_160,160,Quality Inspection,QI for Task 60,Product E,Quality Team 4,2025-08-22 09:30:00,2025-08-22 10:15:00,45,2,864.25,-1000.0,3rd,59
+E_172,172,Quality Inspection,QI for Task 72,Product E,Quality Team 2,2025-08-22 09:30:00,2025-08-22 10:15:00,45,2,874.0,-1000.0,1st,60
+D_136,136,Quality Inspection,QI for Task 36,Product D,Quality Team 3,2025-08-22 09:30:00,2025-08-22 10:15:00,45,2,926.2,-1000.0,2nd,61
+D_56,56,Production,Task 56,Product D,Mechanic Team 5,2025-08-22 09:30:00,2025-08-22 10:40:00,70,3,959.5,48988.0,1st,62
+D_130,130,Quality Inspection,QI for Task 30,Product D,Quality Team 1,2025-08-22 09:45:00,2025-08-22 10:30:00,45,1,814.0,-1000.0,1st,63
+C_160,160,Quality Inspection,QI for Task 60,Product C,Quality Team 1,2025-08-22 09:45:00,2025-08-22 10:30:00,45,2,816.0,-1000.0,1st,64
+D_55,55,Production,Task 55,Product D,Mechanic Team 5,2025-08-22 10:15:00,2025-08-22 11:11:00,56,2,961.5,48910.8,1st,65
+D_172,172,Quality Inspection,QI for Task 72,Product D,Quality Team 3,2025-08-22 10:15:00,2025-08-22 11:00:00,45,2,969.25,-1000.0,2nd,66
+A_82,82,Production,Task 82,Product A,Mechanic Team 1,2025-08-22 10:30:00,2025-08-22 11:30:00,60,2,606.75,49190.0,1st,67
+B_82,82,Production,Task 82,Product B,Mechanic Team 1,2025-08-22 10:30:00,2025-08-22 11:30:00,60,2,750.75,49130.0,1st,68
+E_168,168,Quality Inspection,QI for Task 68,Product E,Quality Team 4,2025-08-22 10:30:00,2025-08-22 11:15:00,45,2,879.25,-1000.0,3rd,69
+D_168,168,Quality Inspection,QI for Task 68,Product D,Quality Team 1,2025-08-22 10:30:00,2025-08-22 11:15:00,45,2,975.25,-1000.0,1st,70
+C_56,56,Production,Task 56,Product C,Mechanic Team 5,2025-08-22 10:40:00,2025-08-22 11:50:00,70,3,814.3333333333334,49048.0,1st,71
+E_56,56,Production,Task 56,Product E,Mechanic Team 5,2025-08-22 10:40:00,2025-08-22 11:50:00,70,3,862.3333333333334,49028.0,1st,72
+C_172,172,Quality Inspection,QI for Task 72,Product C,Quality Team 3,2025-08-22 11:00:00,2025-08-22 11:45:00,45,2,824.5,-1000.0,2nd,73
+D_155,155,Quality Inspection,QI for Task 55,Product D,Quality Team 2,2025-08-22 11:11:00,2025-08-22 11:56:00,45,1,962.8166666666667,-1000.0,1st,74
+D_88,88,Production,Task 88,Product D,Mechanic Team 5,2025-08-22 11:11:00,2025-08-22 13:11:00,120,3,985.3166666666667,49553.0,1st,75
+C_168,168,Quality Inspection,QI for Task 68,Product C,Quality Team 1,2025-08-22 11:15:00,2025-08-22 12:00:00,45,2,830.5,-1000.0,1st,76
+D_156,156,Quality Inspection,QI for Task 56,Product D,Quality Team 4,2025-08-22 11:15:00,2025-08-22 12:00:00,45,2,960.0,-1000.0,3rd,77
+A_182,182,Quality Inspection,QI for Task 82,Product A,Quality Team 3,2025-08-22 11:30:00,2025-08-22 12:15:00,45,1,608.0,-1000.0,2nd,78
+B_182,182,Quality Inspection,QI for Task 82,Product B,Quality Team 1,2025-08-22 11:30:00,2025-08-22 12:15:00,45,1,752.0,-1000.0,1st,79
+C_156,156,Quality Inspection,QI for Task 56,Product C,Quality Team 2,2025-08-22 11:50:00,2025-08-22 12:35:00,45,2,815.4166666666666,-1000.0,1st,80
+C_88,88,Production,Task 88,Product C,Mechanic Team 5,2025-08-22 11:50:00,2025-08-22 13:50:00,120,3,840.6666666666666,49613.0,1st,81
+E_156,156,Quality Inspection,QI for Task 56,Product E,Quality Team 3,2025-08-22 11:50:00,2025-08-22 12:35:00,45,2,863.4166666666666,-1000.0,2nd,82
+E_88,88,Production,Task 88,Product E,Mechanic Team 5,2025-08-22 11:50:00,2025-08-22 13:50:00,120,3,888.6666666666666,49593.0,1st,83
+C_79,79,Production,Task 79,Product C,Mechanic Team 3,2025-08-22 12:00:00,2025-08-22 12:40:00,40,1,848.25,50554.0,1st,84
+B_88,88,Production,Task 88,Product B,Mechanic Team 5,2025-08-22 13:11:00,2025-08-22 15:11:00,120,3,767.3166666666667,49643.0,1st,85
+D_188,188,Quality Inspection,QI for Task 88,Product D,Quality Team 1,2025-08-22 13:11:00,2025-08-22 13:56:00,45,2,985.5666666666667,-1000.0,1st,86
+A_88,88,Production,Task 88,Product A,Mechanic Team 5,2025-08-22 13:50:00,2025-08-22 15:50:00,120,3,622.6666666666666,49703.0,1st,87
+B_78,78,Production,Task 78,Product B,Mechanic Team 5,2025-08-22 13:50:00,2025-08-22 14:50:00,60,2,766.6666666666666,49955.0,1st,88
+C_188,188,Quality Inspection,QI for Task 88,Product C,Quality Team 2,2025-08-22 13:50:00,2025-08-22 14:35:00,45,2,840.9166666666666,-1000.0,1st,89
+E_188,188,Quality Inspection,QI for Task 88,Product E,Quality Team 3,2025-08-22 13:50:00,2025-08-22 14:35:00,45,2,888.9166666666666,-1000.0,2nd,90
+E_3,3,Production,Task 3,Product E,Mechanic Team 2,2025-08-22 14:30:00,2025-08-22 14:50:00,20,1,564.95,45335.0,2nd,91
+C_53,53,Production,Task 53,Product C,Mechanic Team 6,2025-08-22 14:30:00,2025-08-22 15:10:00,40,1,763.25,48376.0,2nd,92
+B_77,77,Production,Task 77,Product B,Mechanic Team 2,2025-08-22 14:30:00,2025-08-22 15:20:00,50,1,771.25,50379.0,2nd,93
+C_62,62,Production,Task 62,Product C,Mechanic Team 6,2025-08-22 14:30:00,2025-08-22 15:30:00,60,2,790.25,48275.0,2nd,94
+C_59,59,Production,Task 59,Product C,Mechanic Team 6,2025-08-22 14:30:00,2025-08-22 15:00:00,30,1,792.75,48953.0,2nd,95
+D_403,403,Rework,Rework 403,Product D,Mechanic Team 2,2025-08-22 14:30:00,2025-08-22 16:00:00,90,2,809.5,-500.0,2nd,96
+D_28,28,Production,Task 28,Product D,Mechanic Team 2,2025-08-22 14:30:00,2025-08-22 16:00:00,90,3,819.5,46409.0,2nd,97
+D_43,43,Production,Task 43,Product D,Mechanic Team 2,2025-08-22 14:30:00,2025-08-22 15:00:00,30,1,825.75,47243.0,2nd,98
+C_57,57,Production,Task 57,Product C,Mechanic Team 6,2025-08-22 14:30:00,2025-08-22 14:50:00,20,1,826.25,49830.0,2nd,99
+D_53,53,Production,Task 53,Product D,Mechanic Team 6,2025-08-22 14:30:00,2025-08-22 15:10:00,40,1,907.25,48316.0,2nd,100
+D_80,80,Production,Task 80,Product D,Mechanic Team 6,2025-08-22 14:30:00,2025-08-22 16:30:00,120,4,983.0,49403.0,2nd,101
+E_7,7,Production,Task 7,Product E,Mechanic Team 2,2025-08-22 14:50:00,2025-08-22 15:20:00,30,1,623.8666666666667,45858.0,2nd,102
+B_178,178,Quality Inspection,QI for Task 78,Product B,Quality Team 2,2025-08-22 14:50:00,2025-08-22 15:35:00,45,1,767.9166666666666,-1000.0,1st,103
+E_80,80,Production,Task 80,Product E,Mechanic Team 6,2025-08-22 15:10:00,2025-08-22 17:10:00,120,4,886.3333333333334,49443.0,2nd,104
+B_188,188,Quality Inspection,QI for Task 88,Product B,Quality Team 1,2025-08-22 15:11:00,2025-08-22 15:56:00,45,2,767.5666666666667,-1000.0,1st,105
+E_14,14,Production,Task 14,Product E,Mechanic Team 2,2025-08-22 15:20:00,2025-08-22 16:50:00,90,3,661.6166666666667,45996.0,2nd,106
+C_162,162,Quality Inspection,QI for Task 62,Product C,Quality Team 3,2025-08-22 15:30:00,2025-08-22 16:15:00,45,1,791.5,-1000.0,2nd,107
+A_188,188,Quality Inspection,QI for Task 88,Product A,Quality Team 3,2025-08-22 15:50:00,2025-08-22 16:35:00,45,2,622.9166666666666,-1000.0,2nd,108
+E_48,48,Production,Task 48,Product E,Mechanic Team 2,2025-08-22 16:00:00,2025-08-22 18:00:00,120,3,806.0,47568.0,2nd,109
+D_10403,10403,Quality Inspection,QI for Task 403,Product D,Quality Team 1,2025-08-22 16:00:00,2025-08-22 16:30:00,30,1,809.5,-1000.0,1st,110
+D_128,128,Quality Inspection,QI for Task 28,Product D,Quality Team 1,2025-08-22 16:00:00,2025-08-22 16:45:00,45,2,820.25,-1000.0,1st,111
+D_48,48,Production,Task 48,Product D,Mechanic Team 2,2025-08-22 16:00:00,2025-08-22 18:00:00,120,3,902.0,47528.0,2nd,112
+D_25,25,Production,Task 25,Product D,Mechanic Team 2,2025-08-22 16:30:00,2025-08-22 17:20:00,50,1,811.5,47039.0,2nd,113
+C_80,80,Production,Task 80,Product C,Mechanic Team 6,2025-08-22 16:30:00,2025-08-22 18:30:00,120,4,837.0,49463.0,2nd,114
+D_180,180,Quality Inspection,QI for Task 80,Product D,Quality Team 2,2025-08-22 16:30:00,2025-08-22 17:15:00,45,2,983.25,-1000.0,1st,115
+E_28,28,Production,Task 28,Product E,Mechanic Team 2,2025-08-22 16:50:00,2025-08-22 18:20:00,90,3,721.1666666666666,46449.0,2nd,116
+B_80,80,Production,Task 80,Product B,Mechanic Team 6,2025-08-22 17:10:00,2025-08-22 19:10:00,120,4,764.3333333333334,49493.0,2nd,117
+E_180,180,Quality Inspection,QI for Task 80,Product E,Quality Team 1,2025-08-22 17:10:00,2025-08-22 17:55:00,45,2,886.5833333333334,-1000.0,1st,118
+D_33,33,Production,Task 33,Product D,Mechanic Team 2,2025-08-22 17:20:00,2025-08-22 17:40:00,20,1,822.9166666666666,47295.0,2nd,119
+E_148,148,Quality Inspection,QI for Task 48,Product E,Quality Team 3,2025-08-22 18:00:00,2025-08-22 18:45:00,45,2,806.25,-1000.0,2nd,120
+E_64,64,Production,Task 64,Product E,Mechanic Team 2,2025-08-22 18:00:00,2025-08-22 20:00:00,120,3,831.0,47943.0,2nd,121
+D_148,148,Quality Inspection,QI for Task 48,Product D,Quality Team 2,2025-08-22 18:00:00,2025-08-22 18:45:00,45,2,902.25,-1000.0,1st,122
+D_64,64,Production,Task 64,Product D,Mechanic Team 2,2025-08-22 18:00:00,2025-08-22 20:00:00,120,3,927.0,47903.0,2nd,123
+E_128,128,Quality Inspection,QI for Task 28,Product E,Quality Team 1,2025-08-22 18:20:00,2025-08-22 19:05:00,45,2,721.9166666666666,-1000.0,1st,124
+C_64,64,Production,Task 64,Product C,Mechanic Team 2,2025-08-22 18:20:00,2025-08-22 20:20:00,120,3,782.6666666666666,47963.0,2nd,125
+A_80,80,Production,Task 80,Product A,Mechanic Team 6,2025-08-22 18:30:00,2025-08-22 20:30:00,120,4,619.0,49553.0,2nd,126
+C_180,180,Quality Inspection,QI for Task 80,Product C,Quality Team 4,2025-08-22 18:30:00,2025-08-22 19:15:00,45,2,837.25,-1000.0,3rd,127
+B_180,180,Quality Inspection,QI for Task 80,Product B,Quality Team 2,2025-08-22 19:10:00,2025-08-22 19:55:00,45,2,764.5833333333334,-1000.0,1st,128
+E_92,92,Production,Task 92,Product E,Mechanic Team 6,2025-08-22 19:10:00,2025-08-22 20:40:00,90,3,883.8333333333334,49749.0,2nd,129
+D_92,92,Production,Task 92,Product D,Mechanic Team 6,2025-08-22 19:10:00,2025-08-22 20:40:00,90,3,979.8333333333334,49709.0,2nd,130
+E_164,164,Quality Inspection,QI for Task 64,Product E,Quality Team 1,2025-08-22 20:00:00,2025-08-22 20:45:00,45,2,831.25,-1000.0,1st,131
+D_164,164,Quality Inspection,QI for Task 64,Product D,Quality Team 2,2025-08-22 20:00:00,2025-08-22 20:45:00,45,2,927.25,-1000.0,1st,132
+C_164,164,Quality Inspection,QI for Task 64,Product C,Quality Team 3,2025-08-22 20:20:00,2025-08-22 21:05:00,45,2,782.9166666666666,-1000.0,2nd,133
+A_180,180,Quality Inspection,QI for Task 80,Product A,Quality Team 4,2025-08-22 20:30:00,2025-08-22 21:15:00,45,2,619.25,-1000.0,3rd,134
+C_92,92,Production,Task 92,Product C,Mechanic Team 6,2025-08-22 20:30:00,2025-08-22 22:00:00,90,3,834.5,49769.0,2nd,135
+A_92,92,Production,Task 92,Product A,Mechanic Team 6,2025-08-22 20:40:00,2025-08-22 22:10:00,90,3,618.3333333333334,49859.0,2nd,136
+B_92,92,Production,Task 92,Product B,Mechanic Team 6,2025-08-22 20:40:00,2025-08-22 22:10:00,90,3,762.3333333333334,49799.0,2nd,137
+D_192,192,Quality Inspection,QI for Task 92,Product D,Quality Team 1,2025-08-22 20:45:00,2025-08-22 21:30:00,45,2,980.5,-1000.0,1st,138
+E_192,192,Quality Inspection,QI for Task 92,Product E,Quality Team 3,2025-08-22 21:05:00,2025-08-22 21:50:00,45,2,884.1666666666666,-1000.0,2nd,139
+C_192,192,Quality Inspection,QI for Task 92,Product C,Quality Team 1,2025-08-22 22:00:00,2025-08-22 22:45:00,45,2,835.25,-1000.0,1st,140
+A_192,192,Quality Inspection,QI for Task 92,Product A,Quality Team 3,2025-08-22 22:10:00,2025-08-22 22:55:00,45,2,619.0833333333334,-1000.0,2nd,141
+B_192,192,Quality Inspection,QI for Task 92,Product B,Quality Team 2,2025-08-22 22:10:00,2025-08-22 22:55:00,45,2,763.0833333333334,-1000.0,1st,142
+A_81,81,Production,Task 81,Product A,Mechanic Team 7,2025-08-22 23:00:00,2025-08-22 23:20:00,20,1,593.75,49945.0,3rd,143
+E_11,11,Production,Task 11,Product E,Mechanic Team 4,2025-08-22 23:00:00,2025-08-22 23:20:00,20,1,609.2,45835.0,3rd,144
+A_83,83,Production,Task 83,Product A,Mechanic Team 7,2025-08-22 23:00:00,2025-08-22 23:30:00,30,1,612.5,50018.0,3rd,145
+A_87,87,Production,Task 87,Product A,Mechanic Team 7,2025-08-22 23:00:00,2025-08-22 23:50:00,50,1,616.5,50217.0,3rd,146
+E_15,15,Production,Task 15,Product E,Mechanic Team 4,2025-08-22 23:00:00,2025-08-22 23:40:00,40,1,674.45,46334.0,3rd,147
+B_81,81,Production,Task 81,Product B,Mechanic Team 7,2025-08-22 23:00:00,2025-08-22 23:20:00,20,1,737.75,49885.0,3rd,148
+C_63,63,Production,Task 63,Product C,Mechanic Team 4,2025-08-22 23:00:00,2025-08-22 23:30:00,30,1,754.75,48428.0,3rd,149
+B_83,83,Production,Task 83,Product B,Mechanic Team 7,2025-08-22 23:00:00,2025-08-22 23:30:00,30,1,756.5,49958.0,3rd,150
+B_87,87,Production,Task 87,Product B,Mechanic Team 7,2025-08-22 23:00:00,2025-08-22 23:50:00,50,1,760.5,50157.0,3rd,151
+D_32,32,Production,Task 32,Product D,Mechanic Team 4,2025-08-22 23:00:00,2025-08-23 01:00:00,120,3,858.25,46703.0,3rd,152
+D_27,27,Production,Task 27,Product D,Mechanic Team 4,2025-08-22 23:00:00,2025-08-22 23:20:00,20,1,864.0,47523.0,3rd,153
+D_54,54,Production,Task 54,Product D,Mechanic Team 4,2025-08-22 23:00:00,2025-08-23 00:00:00,60,2,924.25,48437.0,3rd,154
+A_85,85,Production,Task 85,Product A,Mechanic Team 7,2025-08-22 23:20:00,2025-08-23 00:00:00,40,1,610.4166666666666,50041.0,3rd,155
+E_22,22,Production,Task 22,Product E,Mechanic Team 4,2025-08-22 23:20:00,2025-08-23 00:20:00,60,2,683.4166666666666,45930.0,3rd,156
+B_85,85,Production,Task 85,Product B,Mechanic Team 7,2025-08-22 23:20:00,2025-08-23 00:00:00,40,1,754.4166666666666,49981.0,3rd,157
+D_127,127,Quality Inspection,QI for Task 27,Product D,Quality Team 2,2025-08-22 23:20:00,2025-08-23 00:05:00,45,1,865.9166666666666,-1000.0,1st,158
+A_89,89,Production,Task 89,Product A,Mechanic Team 7,2025-08-22 23:30:00,2025-08-22 23:50:00,20,1,623.5,51023.0,3rd,159
+B_89,89,Production,Task 89,Product B,Mechanic Team 7,2025-08-22 23:30:00,2025-08-22 23:50:00,20,1,767.5,50963.0,3rd,160
+C_54,54,Production,Task 54,Product C,Mechanic Team 4,2025-08-22 23:30:00,2025-08-23 00:30:00,60,2,779.75,48497.0,3rd,161
+E_115,115,Quality Inspection,QI for Task 15,Product E,Quality Team 1,2025-08-22 23:40:00,2025-08-23 00:25:00,45,1,676.0333333333333,-1000.0,1st,162
+C_69,69,Production,Task 69,Product C,Mechanic Team 4,2025-08-22 23:40:00,2025-08-23 00:10:00,30,1,783.5833333333334,48953.0,3rd,163
+A_187,187,Quality Inspection,QI for Task 87,Product A,Quality Team 1,2025-08-22 23:50:00,2025-08-23 00:35:00,45,1,617.9166666666666,-1000.0,1st,164
+B_187,187,Quality Inspection,QI for Task 87,Product B,Quality Team 2,2025-08-22 23:50:00,2025-08-23 00:35:00,45,1,761.9166666666666,-1000.0,1st,165
+A_90,90,Production,Task 90,Product A,Mechanic Team 3,2025-08-25 06:00:00,2025-08-25 07:00:00,60,2,562.5,50165.0,1st,166
+A_94,94,Production,Task 94,Product A,Mechanic Team 1,2025-08-25 06:00:00,2025-08-25 07:00:00,60,2,563.25,50240.0,1st,167
+E_122,122,Quality Inspection,QI for Task 22,Product E,Quality Team 2,2025-08-25 06:00:00,2025-08-25 06:45:00,45,1,631.0,-1000.0,1st,168
+E_30,30,Production,Task 30,Product E,Mechanic Team 3,2025-08-25 06:00:00,2025-08-25 07:00:00,60,2,647.5,46755.0,1st,169
+E_29,29,Production,Task 29,Product E,Mechanic Team 5,2025-08-25 06:00:00,2025-08-25 06:40:00,40,1,650.45,46856.0,1st,170
+B_90,90,Production,Task 90,Product B,Mechanic Team 3,2025-08-25 06:00:00,2025-08-25 07:00:00,60,2,706.5,50105.0,1st,171
+B_94,94,Production,Task 94,Product B,Mechanic Team 1,2025-08-25 06:00:00,2025-08-25 07:00:00,60,2,707.25,50180.0,1st,172
+E_39,39,Production,Task 39,Product E,Mechanic Team 5,2025-08-25 06:00:00,2025-08-25 06:40:00,40,1,731.75,48056.0,1st,173
+C_82,82,Production,Task 82,Product C,Mechanic Team 1,2025-08-25 06:00:00,2025-08-25 07:00:00,60,2,755.25,49100.0,1st,174
+D_132,132,Quality Inspection,QI for Task 32,Product D,Quality Team 2,2025-08-25 06:00:00,2025-08-25 06:45:00,45,2,805.5,-1000.0,1st,175
+D_50,50,Production,Task 50,Product D,Mechanic Team 3,2025-08-25 06:00:00,2025-08-25 07:00:00,60,2,821.5,47390.0,1st,176
+D_34,34,Production,Task 34,Product D,Mechanic Team 5,2025-08-25 06:00:00,2025-08-25 07:00:00,60,2,826.75,47762.0,1st,177
+D_39,39,Production,Task 39,Product D,Mechanic Team 5,2025-08-25 06:00:00,2025-08-25 06:40:00,40,1,827.75,48016.0,1st,178
+D_49,49,Production,Task 49,Product D,Mechanic Team 5,2025-08-25 06:00:00,2025-08-25 06:20:00,20,1,827.75,48120.0,1st,179
+D_61,61,Production,Task 61,Product D,Mechanic Team 1,2025-08-25 06:40:00,2025-08-25 07:20:00,40,1,863.8333333333334,49066.0,1st,180
+A_190,190,Quality Inspection,QI for Task 90,Product A,Quality Team 3,2025-08-25 07:00:00,2025-08-25 07:45:00,45,1,563.75,-1000.0,2nd,181
+A_100,100,Production,Task 100,Product A,Mechanic Team 5,2025-08-25 07:00:00,2025-08-25 08:30:00,90,3,566.75,50534.0,1st,182
+E_130,130,Quality Inspection,QI for Task 30,Product E,Quality Team 1,2025-08-25 07:00:00,2025-08-25 07:45:00,45,1,648.75,-1000.0,1st,183
+B_190,190,Quality Inspection,QI for Task 90,Product B,Quality Team 1,2025-08-25 07:00:00,2025-08-25 07:45:00,45,1,707.75,-1000.0,1st,184
+B_100,100,Production,Task 100,Product B,Mechanic Team 5,2025-08-25 07:00:00,2025-08-25 08:30:00,90,3,710.75,50474.0,1st,185
+C_182,182,Quality Inspection,QI for Task 82,Product C,Quality Team 2,2025-08-25 07:00:00,2025-08-25 07:45:00,45,1,756.5,-1000.0,1st,186
+D_150,150,Quality Inspection,QI for Task 50,Product D,Quality Team 1,2025-08-25 07:00:00,2025-08-25 07:45:00,45,1,822.75,-1000.0,1st,187
+A_200,200,Quality Inspection,QI for Task 100,Product A,Quality Team 2,2025-08-25 08:30:00,2025-08-25 09:15:00,45,2,567.5,-1000.0,1st,188
+B_200,200,Quality Inspection,QI for Task 100,Product B,Quality Team 1,2025-08-25 08:30:00,2025-08-25 09:15:00,45,2,711.5,-1000.0,1st,189
+A_86,86,Production,Task 86,Product A,Mechanic Team 2,2025-08-25 14:30:00,2025-08-25 15:30:00,60,2,549.5,50087.0,2nd,190
+E_43,43,Production,Task 43,Product E,Mechanic Team 2,2025-08-25 14:30:00,2025-08-25 15:00:00,30,1,657.75,47283.0,2nd,191
+B_86,86,Production,Task 86,Product B,Mechanic Team 2,2025-08-25 14:30:00,2025-08-25 15:30:00,60,2,693.5,50027.0,2nd,192
+C_70,70,Production,Task 70,Product C,Mechanic Team 6,2025-08-25 14:30:00,2025-08-25 15:30:00,60,2,737.0,48575.0,2nd,193
+C_71,71,Production,Task 71,Product C,Mechanic Team 2,2025-08-25 14:30:00,2025-08-25 15:10:00,40,1,746.25,49751.0,2nd,194
+D_38,38,Production,Task 38,Product D,Mechanic Team 2,2025-08-25 14:30:00,2025-08-25 15:30:00,60,2,831.5,47840.0,2nd,195
+D_51,51,Production,Task 51,Product D,Mechanic Team 6,2025-08-25 14:30:00,2025-08-25 15:00:00,30,1,856.0,49118.0,2nd,196
+D_62,62,Production,Task 62,Product D,Mechanic Team 6,2025-08-25 14:30:00,2025-08-25 15:30:00,60,2,862.25,48215.0,2nd,197
+D_71,71,Production,Task 71,Product D,Mechanic Team 2,2025-08-25 14:30:00,2025-08-25 15:10:00,40,1,890.25,49691.0,2nd,198
+B_98,98,Production,Task 98,Product B,Mechanic Team 2,2025-08-25 15:00:00,2025-08-25 16:00:00,60,2,702.75,50630.0,2nd,199
+D_66,66,Production,Task 66,Product D,Mechanic Team 6,2025-08-25 15:00:00,2025-08-25 16:00:00,60,2,884.25,49262.0,2nd,200
+A_98,98,Production,Task 98,Product A,Mechanic Team 2,2025-08-25 15:10:00,2025-08-25 16:10:00,60,2,558.5833333333334,50690.0,2nd,201
+C_170,170,Quality Inspection,QI for Task 70,Product C,Quality Team 2,2025-08-25 15:30:00,2025-08-25 16:15:00,45,1,738.25,-1000.0,1st,202
+D_138,138,Quality Inspection,QI for Task 38,Product D,Quality Team 1,2025-08-25 15:30:00,2025-08-25 16:15:00,45,1,832.75,-1000.0,1st,203
+D_162,162,Quality Inspection,QI for Task 62,Product D,Quality Team 2,2025-08-25 15:30:00,2025-08-25 16:15:00,45,1,863.5,-1000.0,1st,204
+B_198,198,Quality Inspection,QI for Task 98,Product B,Quality Team 1,2025-08-25 16:00:00,2025-08-25 16:45:00,45,1,704.0,-1000.0,1st,205
+A_198,198,Quality Inspection,QI for Task 98,Product A,Quality Team 2,2025-08-25 16:10:00,2025-08-25 16:55:00,45,1,559.8333333333334,-1000.0,1st,206
+D_59,59,Production,Task 59,Product D,Mechanic Team 6,2025-08-25 16:15:00,2025-08-25 16:45:00,30,1,863.0,48893.0,2nd,207
+A_93,93,Production,Task 93,Product A,Mechanic Team 7,2025-08-25 23:00:00,2025-08-25 23:40:00,40,1,550.5,50769.0,3rd,208
+A_95,95,Production,Task 95,Product A,Mechanic Team 7,2025-08-25 23:00:00,2025-08-25 23:30:00,30,1,550.75,50846.0,3rd,209
+A_97,97,Production,Task 97,Product A,Mechanic Team 7,2025-08-25 23:00:00,2025-08-25 23:20:00,20,1,553.0,51126.0,3rd,210
+E_42,42,Production,Task 42,Product E,Mechanic Team 4,2025-08-25 23:00:00,2025-08-26 00:00:00,60,2,690.25,47055.0,3rd,211
+B_93,93,Production,Task 93,Product B,Mechanic Team 7,2025-08-25 23:00:00,2025-08-25 23:40:00,40,1,694.5,50709.0,3rd,212
+E_27,27,Production,Task 27,Product E,Mechanic Team 4,2025-08-25 23:00:00,2025-08-25 23:20:00,20,1,696.0,47563.0,3rd,213
+B_97,97,Production,Task 97,Product B,Mechanic Team 7,2025-08-25 23:00:00,2025-08-25 23:20:00,20,1,697.0,51066.0,3rd,214
+C_81,81,Production,Task 81,Product C,Mechanic Team 7,2025-08-25 23:00:00,2025-08-25 23:20:00,20,1,737.75,49855.0,3rd,215
+C_83,83,Production,Task 83,Product C,Mechanic Team 7,2025-08-25 23:00:00,2025-08-25 23:30:00,30,1,756.5,49928.0,3rd,216
+C_87,87,Production,Task 87,Product C,Mechanic Team 7,2025-08-25 23:00:00,2025-08-25 23:50:00,50,1,760.5,50127.0,3rd,217
+D_63,63,Production,Task 63,Product D,Mechanic Team 4,2025-08-25 23:00:00,2025-08-25 23:30:00,30,1,826.75,48368.0,3rd,218
+D_37,37,Production,Task 37,Product D,Mechanic Team 4,2025-08-25 23:00:00,2025-08-25 23:30:00,30,1,861.25,48743.0,3rd,219
+D_84,84,Production,Task 84,Product D,Mechanic Team 4,2025-08-25 23:00:00,2025-08-26 00:30:00,90,3,893.25,49034.0,3rd,220
+E_127,127,Quality Inspection,QI for Task 27,Product E,Quality Team 1,2025-08-25 23:20:00,2025-08-26 00:05:00,45,1,697.9166666666666,-1000.0,1st,221
+C_85,85,Production,Task 85,Product C,Mechanic Team 7,2025-08-25 23:20:00,2025-08-26 00:00:00,40,1,754.4166666666666,49951.0,3rd,222
+E_84,84,Production,Task 84,Product E,Mechanic Team 4,2025-08-25 23:20:00,2025-08-26 00:50:00,90,3,796.9166666666666,49074.0,3rd,223
+A_195,195,Quality Inspection,QI for Task 95,Product A,Quality Team 1,2025-08-25 23:30:00,2025-08-26 00:15:00,45,1,552.5,-1000.0,1st,224
+D_69,69,Production,Task 69,Product D,Mechanic Team 4,2025-08-25 23:30:00,2025-08-26 00:00:00,30,1,855.75,48893.0,3rd,225
+C_187,187,Quality Inspection,QI for Task 87,Product C,Quality Team 1,2025-08-25 23:50:00,2025-08-26 00:35:00,45,1,761.9166666666666,-1000.0,1st,226
+E_142,142,Quality Inspection,QI for Task 42,Product E,Quality Team 2,2025-08-26 00:00:00,2025-08-26 00:45:00,45,1,691.5,-1000.0,1st,227
+C_84,84,Production,Task 84,Product C,Mechanic Team 4,2025-08-26 00:00:00,2025-08-26 01:30:00,90,3,748.25,49094.0,3rd,228
+D_81,81,Production,Task 81,Product D,Mechanic Team 7,2025-08-26 00:00:00,2025-08-26 00:20:00,20,1,880.75,49795.0,3rd,229
+D_85,85,Production,Task 85,Product D,Mechanic Team 7,2025-08-26 00:20:00,2025-08-26 01:00:00,40,1,897.4166666666666,49891.0,3rd,230
+B_84,84,Production,Task 84,Product B,Mechanic Team 4,2025-08-26 00:30:00,2025-08-26 02:00:00,90,3,675.75,49124.0,3rd,231
+D_184,184,Quality Inspection,QI for Task 84,Product D,Quality Team 1,2025-08-26 00:30:00,2025-08-26 01:15:00,45,2,894.0,-1000.0,1st,232
+A_84,84,Production,Task 84,Product A,Mechanic Team 4,2025-08-26 00:50:00,2025-08-26 02:20:00,90,3,531.4166666666666,49184.0,3rd,233
+E_184,184,Quality Inspection,QI for Task 84,Product E,Quality Team 3,2025-08-26 00:50:00,2025-08-26 01:35:00,45,2,797.6666666666666,-1000.0,2nd,234
+C_184,184,Quality Inspection,QI for Task 84,Product C,Quality Team 1,2025-08-26 01:30:00,2025-08-26 02:15:00,45,2,749.0,-1000.0,1st,235
+D_76,76,Production,Task 76,Product D,Mechanic Team 4,2025-08-26 01:30:00,2025-08-26 03:00:00,90,3,896.25,49559.0,3rd,236
+B_184,184,Quality Inspection,QI for Task 84,Product B,Quality Team 2,2025-08-26 02:00:00,2025-08-26 02:45:00,45,2,676.5,-1000.0,1st,237
+E_76,76,Production,Task 76,Product E,Mechanic Team 4,2025-08-26 02:00:00,2025-08-26 03:30:00,90,3,799.75,49599.0,3rd,238
+A_184,184,Quality Inspection,QI for Task 84,Product A,Quality Team 1,2025-08-26 02:20:00,2025-08-26 03:05:00,45,2,532.1666666666666,-1000.0,1st,239
+C_76,76,Production,Task 76,Product C,Mechanic Team 4,2025-08-26 02:20:00,2025-08-26 03:50:00,90,3,751.4166666666666,49619.0,3rd,240
+B_91,91,Production,Task 91,Product B,Mechanic Team 7,2025-08-26 02:45:00,2025-08-26 03:15:00,30,1,690.75,50761.0,3rd,241
+B_76,76,Production,Task 76,Product B,Mechanic Team 4,2025-08-26 03:00:00,2025-08-26 04:30:00,90,3,678.75,49649.0,3rd,242
+D_176,176,Quality Inspection,QI for Task 76,Product D,Quality Team 2,2025-08-26 03:00:00,2025-08-26 03:45:00,45,2,897.0,-1000.0,1st,243
+A_91,91,Production,Task 91,Product A,Mechanic Team 7,2025-08-26 03:05:00,2025-08-26 03:35:00,30,1,546.4166666666666,50821.0,3rd,244
+B_99,99,Production,Task 99,Product B,Mechanic Team 7,2025-08-26 03:15:00,2025-08-26 04:05:00,50,1,692.75,50910.0,3rd,245
+E_176,176,Quality Inspection,QI for Task 76,Product E,Quality Team 1,2025-08-26 03:30:00,2025-08-26 04:15:00,45,2,800.5,-1000.0,1st,246
+D_96,96,Production,Task 96,Product D,Mechanic Team 4,2025-08-26 03:30:00,2025-08-26 05:30:00,120,4,906.25,50228.0,3rd,247
+A_99,99,Production,Task 99,Product A,Mechanic Team 7,2025-08-26 03:35:00,2025-08-26 04:25:00,50,1,548.4166666666666,50970.0,3rd,248
+C_176,176,Quality Inspection,QI for Task 76,Product C,Quality Team 3,2025-08-26 03:50:00,2025-08-26 04:35:00,45,2,752.1666666666666,-1000.0,2nd,249
+B_176,176,Quality Inspection,QI for Task 76,Product B,Quality Team 2,2025-08-26 04:30:00,2025-08-26 05:15:00,45,2,679.5,-1000.0,1st,250
+E_96,96,Production,Task 96,Product E,Mechanic Team 4,2025-08-26 04:30:00,2025-08-26 06:30:00,120,4,809.25,50268.0,3rd,251
+B_95,95,Production,Task 95,Product B,Mechanic Team 7,2025-08-26 05:15:00,2025-08-26 05:45:00,30,1,688.5,50786.0,3rd,252
+C_96,96,Production,Task 96,Product C,Mechanic Team 4,2025-08-26 05:30:00,2025-08-26 07:30:00,120,4,760.25,50288.0,3rd,253
+D_196,196,Quality Inspection,QI for Task 96,Product D,Quality Team 2,2025-08-26 05:30:00,2025-08-26 06:15:00,45,2,906.5,-1000.0,1st,254
+B_195,195,Quality Inspection,QI for Task 95,Product B,Quality Team 2,2025-08-26 05:45:00,2025-08-26 06:30:00,45,1,690.25,-1000.0,1st,255
+D_65,65,Production,Task 65,Product D,Mechanic Team 5,2025-08-26 06:00:00,2025-08-26 06:20:00,20,1,872.0,49320.0,1st,256
+D_82,82,Production,Task 82,Product D,Mechanic Team 1,2025-08-26 06:00:00,2025-08-26 07:00:00,60,2,875.25,49040.0,1st,257
+D_67,67,Production,Task 67,Product D,Mechanic Team 3,2025-08-26 06:00:00,2025-08-26 06:50:00,50,1,880.5,49392.0,1st,258
+D_75,75,Production,Task 75,Product D,Mechanic Team 1,2025-08-26 06:00:00,2025-08-26 06:30:00,30,1,889.5,49721.0,1st,259
+D_73,73,Production,Task 73,Product D,Mechanic Team 3,2025-08-26 06:20:00,2025-08-26 06:40:00,20,1,893.1666666666666,49920.0,1st,260
+E_196,196,Quality Inspection,QI for Task 96,Product E,Quality Team 1,2025-08-26 06:30:00,2025-08-26 07:15:00,45,2,809.5,-1000.0,1st,261
+D_175,175,Quality Inspection,QI for Task 75,Product D,Quality Team 2,2025-08-26 06:30:00,2025-08-26 07:15:00,45,1,891.25,-1000.0,1st,262
+D_167,167,Quality Inspection,QI for Task 67,Product D,Quality Team 2,2025-08-26 06:50:00,2025-08-26 07:35:00,45,1,881.9166666666666,-1000.0,1st,263
+D_182,182,Quality Inspection,QI for Task 82,Product D,Quality Team 2,2025-08-26 07:00:00,2025-08-26 07:45:00,45,1,876.5,-1000.0,1st,264
+D_94,94,Production,Task 94,Product D,Mechanic Team 1,2025-08-26 07:15:00,2025-08-26 08:15:00,60,2,898.0,50090.0,1st,265
+C_196,196,Quality Inspection,QI for Task 96,Product C,Quality Team 3,2025-08-26 07:30:00,2025-08-26 08:15:00,45,2,760.5,-1000.0,2nd,266
+D_100,100,Production,Task 100,Product D,Mechanic Team 5,2025-08-26 08:15:00,2025-08-26 09:45:00,90,3,901.5,50384.0,1st,267
+D_200,200,Quality Inspection,QI for Task 100,Product D,Quality Team 2,2025-08-26 09:45:00,2025-08-26 10:30:00,45,2,902.25,-1000.0,1st,268
+E_38,38,Production,Task 38,Product E,Mechanic Team 2,2025-08-26 14:30:00,2025-08-26 15:30:00,60,2,711.5,47880.0,2nd,269
+C_86,86,Production,Task 86,Product C,Mechanic Team 2,2025-08-26 14:30:00,2025-08-26 15:30:00,60,2,741.5,49997.0,2nd,270
+D_70,70,Production,Task 70,Product D,Mechanic Team 6,2025-08-26 14:30:00,2025-08-26 15:30:00,60,2,857.0,48515.0,2nd,271
+D_74,74,Production,Task 74,Product D,Mechanic Team 6,2025-08-26 14:30:00,2025-08-26 15:30:00,60,2,880.0,49412.0,2nd,272
+D_86,86,Production,Task 86,Product D,Mechanic Team 2,2025-08-26 14:30:00,2025-08-26 15:30:00,60,2,885.5,49937.0,2nd,273
+E_138,138,Quality Inspection,QI for Task 38,Product E,Quality Team 2,2025-08-26 15:30:00,2025-08-26 16:15:00,45,1,712.75,-1000.0,1st,274
+D_170,170,Quality Inspection,QI for Task 70,Product D,Quality Team 2,2025-08-26 15:30:00,2025-08-26 16:15:00,45,1,858.25,-1000.0,1st,275
+E_59,59,Production,Task 59,Product E,Mechanic Team 6,2025-08-26 16:15:00,2025-08-26 16:45:00,30,1,743.0,48933.0,2nd,276
+A_96,96,Production,Task 96,Product A,Mechanic Team 4,2025-08-26 23:00:00,2025-08-27 01:00:00,120,4,526.75,50378.0,3rd,277
+B_96,96,Production,Task 96,Product B,Mechanic Team 4,2025-08-26 23:00:00,2025-08-27 01:00:00,120,4,670.75,50318.0,3rd,278
+C_95,95,Production,Task 95,Product C,Mechanic Team 7,2025-08-26 23:00:00,2025-08-26 23:30:00,30,1,742.75,50756.0,3rd,279
+D_83,83,Production,Task 83,Product D,Mechanic Team 7,2025-08-26 23:00:00,2025-08-26 23:30:00,30,1,876.5,49868.0,3rd,280
+D_87,87,Production,Task 87,Product D,Mechanic Team 7,2025-08-26 23:00:00,2025-08-26 23:50:00,50,1,880.5,50067.0,3rd,281
+D_93,93,Production,Task 93,Product D,Mechanic Team 7,2025-08-26 23:00:00,2025-08-26 23:40:00,40,1,886.5,50619.0,3rd,282
+D_91,91,Production,Task 91,Product D,Mechanic Team 7,2025-08-26 23:00:00,2025-08-26 23:30:00,30,1,886.5,50671.0,3rd,283
+C_195,195,Quality Inspection,QI for Task 95,Product C,Quality Team 1,2025-08-26 23:30:00,2025-08-27 00:15:00,45,1,744.5,-1000.0,1st,284
+D_89,89,Production,Task 89,Product D,Mechanic Team 7,2025-08-26 23:30:00,2025-08-26 23:50:00,20,1,887.5,50873.0,3rd,285
+D_187,187,Quality Inspection,QI for Task 87,Product D,Quality Team 1,2025-08-26 23:50:00,2025-08-27 00:35:00,45,1,881.9166666666666,-1000.0,1st,286
+A_196,196,Quality Inspection,QI for Task 96,Product A,Quality Team 1,2025-08-27 01:00:00,2025-08-27 01:45:00,45,2,527.0,-1000.0,1st,287
+B_196,196,Quality Inspection,QI for Task 96,Product B,Quality Team 2,2025-08-27 01:00:00,2025-08-27 01:45:00,45,2,671.0,-1000.0,1st,288
+D_90,90,Production,Task 90,Product D,Mechanic Team 3,2025-08-27 06:00:00,2025-08-27 07:00:00,60,2,874.5,50015.0,1st,289
+D_190,190,Quality Inspection,QI for Task 90,Product D,Quality Team 1,2025-08-27 07:00:00,2025-08-27 07:45:00,45,1,875.75,-1000.0,1st,290
+E_301,301,Late Part,Late Part 301,Product E,Mechanic Team 1,2025-09-02 06:00:00,2025-09-02 08:00:00,120,2,318.2,-2000.0,1st,291
+E_2,2,Production,Task 2,Product E,Mechanic Team 1,2025-09-02 08:00:00,2025-09-02 09:00:00,60,2,319.2,44424.0,1st,292
+E_6,6,Production,Task 6,Product E,Mechanic Team 3,2025-09-02 09:00:00,2025-09-02 10:30:00,90,2,356.7,44724.0,1st,293
+E_4,4,Production,Task 4,Product E,Mechanic Team 1,2025-09-02 09:00:00,2025-09-02 11:00:00,120,3,361.7,44868.0,1st,294
+E_106,106,Quality Inspection,QI for Task 6,Product E,Quality Team 1,2025-09-02 10:30:00,2025-09-02 11:15:00,45,1,357.45,-1000.0,1st,295
+E_104,104,Quality Inspection,QI for Task 4,Product E,Quality Team 2,2025-09-02 11:00:00,2025-09-02 11:45:00,45,2,361.95,-1000.0,1st,296
+E_12,12,Production,Task 12,Product E,Mechanic Team 3,2025-09-02 11:15:00,2025-09-02 12:15:00,60,2,385.7,45405.0,1st,297
+E_9,9,Production,Task 9,Product E,Mechanic Team 3,2025-09-02 11:45:00,2025-09-02 12:35:00,50,1,451.45,47199.0,1st,298
+E_112,112,Quality Inspection,QI for Task 12,Product E,Quality Team 1,2025-09-02 12:15:00,2025-09-02 13:00:00,45,1,386.95,-1000.0,1st,299
+E_24,24,Production,Task 24,Product E,Mechanic Team 3,2025-09-02 13:00:00,2025-09-02 15:00:00,120,4,445.7,45918.0,1st,300
+E_124,124,Quality Inspection,QI for Task 24,Product E,Quality Team 1,2025-09-02 15:00:00,2025-09-02 15:45:00,45,2,445.95,-1000.0,1st,301
+E_13,13,Production,Task 13,Product E,Mechanic Team 4,2025-09-02 23:00:00,2025-09-02 23:30:00,30,1,441.2,47408.0,3rd,302
+E_31,31,Production,Task 31,Product E,Mechanic Team 1,2025-09-03 06:00:00,2025-09-03 06:30:00,30,1,485.7,47958.0,1st,303
+E_302,302,Late Part,Late Part 302,Product E,Mechanic Team 2,2025-09-03 14:30:00,2025-09-03 16:00:00,90,1,496.45,-2000.0,2nd,304
+E_18,18,Production,Task 18,Product E,Mechanic Team 3,2025-09-04 06:00:00,2025-09-04 08:00:00,120,3,486.95,47438.0,1st,305
+E_118,118,Quality Inspection,QI for Task 18,Product E,Quality Team 1,2025-09-04 08:00:00,2025-09-04 08:45:00,45,2,487.2,-1000.0,1st,306
+E_36,36,Production,Task 36,Product E,Mechanic Team 1,2025-09-04 08:45:00,2025-09-04 10:15:00,90,3,516.7,48269.0,1st,307
+E_136,136,Quality Inspection,QI for Task 36,Product E,Quality Team 2,2025-09-04 10:15:00,2025-09-04 11:00:00,45,2,517.45,-1000.0,1st,308
+D_308,308,Late Part,Late Part 308,Product D,Mechanic Team 2,2025-09-04 14:30:00,2025-09-04 15:45:00,75,1,551.75,-2000.0,2nd,309
+E_37,37,Production,Task 37,Product E,Mechanic Team 4,2025-09-04 23:00:00,2025-09-04 23:30:00,30,1,525.25,48783.0,3rd,310
+D_42,42,Production,Task 42,Product D,Mechanic Team 4,2025-09-04 23:00:00,2025-09-05 00:00:00,60,2,546.25,47015.0,3rd,311
+D_142,142,Quality Inspection,QI for Task 42,Product D,Quality Team 1,2025-09-05 00:00:00,2025-09-05 00:45:00,45,1,547.5,-1000.0,1st,312
+D_47,47,Production,Task 47,Product D,Mechanic Team 4,2025-09-05 00:45:00,2025-09-05 01:25:00,40,1,617.25,48469.0,3rd,313
+D_147,147,Quality Inspection,QI for Task 47,Product D,Quality Team 2,2025-09-05 01:25:00,2025-09-05 02:10:00,45,1,618.8333333333334,-1000.0,1st,314
+D_58,58,Production,Task 58,Product D,Mechanic Team 5,2025-09-05 06:00:00,2025-09-05 07:00:00,60,2,641.5,48890.0,1st,315
+D_158,158,Quality Inspection,QI for Task 58,Product D,Quality Team 2,2025-09-05 07:00:00,2025-09-05 07:45:00,45,1,642.75,-1000.0,1st,316
+D_79,79,Production,Task 79,Product D,Mechanic Team 3,2025-09-05 07:45:00,2025-09-05 08:25:00,40,1,660.5,50494.0,1st,317
+D_57,57,Production,Task 57,Product D,Mechanic Team 6,2025-09-05 14:30:00,2025-09-05 14:50:00,20,1,634.25,49770.0,2nd,318
+D_77,77,Production,Task 77,Product D,Mechanic Team 2,2025-09-05 14:50:00,2025-09-05 15:40:00,50,1,650.9166666666666,50289.0,2nd,319
+D_98,98,Production,Task 98,Product D,Mechanic Team 2,2025-09-05 15:40:00,2025-09-05 16:40:00,60,2,654.0833333333334,50540.0,2nd,320
+D_198,198,Quality Inspection,QI for Task 98,Product D,Quality Team 1,2025-09-05 16:40:00,2025-09-05 17:25:00,45,1,655.3333333333334,-1000.0,1st,321
+D_95,95,Production,Task 95,Product D,Mechanic Team 7,2025-09-05 23:00:00,2025-09-05 23:30:00,30,1,646.75,50696.0,3rd,322
+D_97,97,Production,Task 97,Product D,Mechanic Team 7,2025-09-05 23:00:00,2025-09-05 23:20:00,20,1,649.0,50976.0,3rd,323
+D_195,195,Quality Inspection,QI for Task 95,Product D,Quality Team 1,2025-09-05 23:30:00,2025-09-06 00:15:00,45,1,648.5,-1000.0,1st,324
+E_303,303,Late Part,Late Part 303,Product E,Mechanic Team 1,2025-09-08 06:00:00,2025-09-08 08:30:00,150,3,177.2,-2000.0,1st,325
+D_78,78,Production,Task 78,Product D,Mechanic Team 5,2025-09-08 06:00:00,2025-09-08 07:00:00,60,2,582.5,49865.0,1st,326
+D_178,178,Quality Inspection,QI for Task 78,Product D,Quality Team 1,2025-09-08 07:00:00,2025-09-08 07:45:00,45,1,583.75,-1000.0,1st,327
+E_5,5,Production,Task 5,Product E,Mechanic Team 2,2025-09-08 14:30:00,2025-09-08 15:10:00,40,1,170.7,45431.0,2nd,328
+D_99,99,Production,Task 99,Product D,Mechanic Team 7,2025-09-08 23:00:00,2025-09-08 23:50:00,50,1,577.0,50820.0,3rd,329
+E_10,10,Production,Task 10,Product E,Mechanic Team 1,2025-09-09 06:00:00,2025-09-09 08:00:00,120,4,235.45,45618.0,1st,330
+E_110,110,Quality Inspection,QI for Task 10,Product E,Quality Team 1,2025-09-09 08:00:00,2025-09-09 08:45:00,45,2,235.7,-1000.0,1st,331
+E_20,20,Production,Task 20,Product E,Mechanic Team 1,2025-09-09 08:45:00,2025-09-09 10:15:00,90,2,317.7,46449.0,1st,332
+E_120,120,Quality Inspection,QI for Task 20,Product E,Quality Team 2,2025-09-09 10:15:00,2025-09-09 11:00:00,45,2,318.45,-1000.0,1st,333
+E_41,41,Production,Task 41,Product E,Mechanic Team 1,2025-09-09 11:00:00,2025-09-09 11:20:00,20,1,336.7,48010.0,1st,334
+E_40,40,Production,Task 40,Product E,Mechanic Team 3,2025-09-09 11:00:00,2025-09-09 13:00:00,120,4,360.5,47118.0,1st,335
+E_45,45,Production,Task 45,Product E,Mechanic Team 3,2025-09-09 11:20:00,2025-09-09 12:10:00,50,1,367.1666666666667,48104.0,1st,336
+E_46,46,Production,Task 46,Product E,Mechanic Team 1,2025-09-09 11:20:00,2025-09-09 12:20:00,60,2,396.3666666666667,48647.0,1st,337
+E_55,55,Production,Task 55,Product E,Mechanic Team 5,2025-09-09 12:20:00,2025-09-09 13:16:00,56,2,431.4166666666667,48950.8,1st,338
+E_140,140,Quality Inspection,QI for Task 40,Product E,Quality Team 1,2025-09-09 13:00:00,2025-09-09 13:45:00,45,2,360.75,-1000.0,1st,339
+E_155,155,Quality Inspection,QI for Task 55,Product E,Quality Team 1,2025-09-09 13:16:00,2025-09-09 14:01:00,45,1,432.73333333333335,-1000.0,1st,340
+E_21,21,Production,Task 21,Product E,Mechanic Team 2,2025-09-09 14:30:00,2025-09-09 15:10:00,40,1,252.7,46881.0,2nd,341
+E_25,25,Production,Task 25,Product E,Mechanic Team 2,2025-09-09 15:10:00,2025-09-09 16:00:00,50,1,284.8333333333333,47079.0,2nd,342
+E_26,26,Production,Task 26,Product E,Mechanic Team 1,2025-09-10 06:00:00,2025-09-10 07:00:00,60,2,311.7,47577.0,1st,343
+E_35,35,Production,Task 35,Product E,Mechanic Team 3,2025-09-10 07:00:00,2025-09-10 07:50:00,50,1,345.25,47882.0,1st,344
+E_135,135,Quality Inspection,QI for Task 35,Product E,Quality Team 1,2025-09-10 07:50:00,2025-09-10 08:35:00,45,1,346.6666666666667,-1000.0,1st,345
+E_53,53,Production,Task 53,Product E,Mechanic Team 6,2025-09-10 14:30:00,2025-09-10 15:10:00,40,1,355.25,48356.0,2nd,346
+E_54,54,Production,Task 54,Product E,Mechanic Team 4,2025-09-10 23:00:00,2025-09-11 00:00:00,60,2,372.25,48477.0,3rd,347
+E_71,71,Production,Task 71,Product E,Mechanic Team 2,2025-09-11 14:30:00,2025-09-11 15:10:00,40,1,386.25,49731.0,2nd,348
+E_304,304,Late Part,Late Part 304,Product E,Mechanic Team 3,2025-09-12 06:00:00,2025-09-12 07:00:00,60,1,165.0,-2000.0,1st,349
+E_8,8,Production,Task 8,Product E,Mechanic Team 1,2025-09-12 07:00:00,2025-09-12 08:00:00,60,2,167.0,45705.0,1st,350
+E_108,108,Quality Inspection,QI for Task 8,Product E,Quality Team 2,2025-09-12 08:00:00,2025-09-12 08:45:00,45,2,168.25,-1000.0,1st,351
+E_16,16,Production,Task 16,Product E,Mechanic Team 1,2025-09-12 08:45:00,2025-09-12 09:45:00,60,2,193.0,46230.0,1st,352
+E_17,17,Production,Task 17,Product E,Mechanic Team 5,2025-09-12 08:45:00,2025-09-12 09:15:00,30,1,233.75,47658.0,1st,353
+E_34,34,Production,Task 34,Product E,Mechanic Team 5,2025-09-12 09:15:00,2025-09-12 10:15:00,60,2,295.5,47802.0,1st,354
+E_116,116,Quality Inspection,QI for Task 16,Product E,Quality Team 2,2025-09-12 09:45:00,2025-09-12 10:30:00,45,2,194.25,-1000.0,1st,355
+E_33,33,Production,Task 33,Product E,Mechanic Team 2,2025-09-12 14:30:00,2025-09-12 14:50:00,20,1,225.75,47335.0,2nd,356
+E_51,51,Production,Task 51,Product E,Mechanic Team 6,2025-09-12 14:30:00,2025-09-12 15:00:00,30,1,328.0,49158.0,2nd,357
+E_32,32,Production,Task 32,Product E,Mechanic Team 4,2025-09-12 23:00:00,2025-09-13 01:00:00,120,3,258.25,46743.0,3rd,358
+E_132,132,Quality Inspection,QI for Task 32,Product E,Quality Team 2,2025-09-15 06:00:00,2025-09-15 06:45:00,45,2,205.5,-1000.0,1st,359
+C_309,309,Late Part,Late Part 309,Product C,Mechanic Team 1,2025-09-15 06:00:00,2025-09-15 08:00:00,120,2,215.0,-2000.0,1st,360
+E_50,50,Production,Task 50,Product E,Mechanic Team 3,2025-09-15 06:00:00,2025-09-15 07:00:00,60,2,221.5,47430.0,1st,361
+E_49,49,Production,Task 49,Product E,Mechanic Team 5,2025-09-15 06:00:00,2025-09-15 06:20:00,20,1,227.75,48160.0,1st,362
+E_61,61,Production,Task 61,Product E,Mechanic Team 1,2025-09-15 06:20:00,2025-09-15 07:00:00,40,1,264.1666666666667,49106.0,1st,363
+E_150,150,Quality Inspection,QI for Task 50,Product E,Quality Team 2,2025-09-15 07:00:00,2025-09-15 07:45:00,45,1,222.75,-1000.0,1st,364
+E_65,65,Production,Task 65,Product E,Mechanic Team 5,2025-09-15 07:00:00,2025-09-15 07:20:00,20,1,295.0,49360.0,1st,365
+E_73,73,Production,Task 73,Product E,Mechanic Team 3,2025-09-15 07:20:00,2025-09-15 07:40:00,20,1,316.1666666666667,49960.0,1st,366
+C_51,51,Production,Task 51,Product C,Mechanic Team 6,2025-09-15 14:30:00,2025-09-15 15:00:00,30,1,208.0,49178.0,2nd,367
+E_62,62,Production,Task 62,Product E,Mechanic Team 6,2025-09-15 14:30:00,2025-09-15 15:30:00,60,2,262.25,48255.0,2nd,368
+E_66,66,Production,Task 66,Product E,Mechanic Team 6,2025-09-15 14:30:00,2025-09-15 15:30:00,60,2,284.75,49302.0,2nd,369
+E_74,74,Production,Task 74,Product E,Mechanic Team 6,2025-09-15 14:30:00,2025-09-15 15:30:00,60,2,304.0,49452.0,2nd,370
+C_66,66,Production,Task 66,Product C,Mechanic Team 6,2025-09-15 15:00:00,2025-09-15 16:00:00,60,2,236.25,49322.0,2nd,371
+E_162,162,Quality Inspection,QI for Task 62,Product E,Quality Team 1,2025-09-15 15:30:00,2025-09-15 16:15:00,45,1,263.5,-1000.0,1st,372
+E_63,63,Production,Task 63,Product E,Mechanic Team 4,2025-09-15 23:00:00,2025-09-15 23:30:00,30,1,226.75,48408.0,3rd,373
+E_47,47,Production,Task 47,Product E,Mechanic Team 4,2025-09-15 23:00:00,2025-09-15 23:40:00,40,1,259.0,48509.0,3rd,374
+E_91,91,Production,Task 91,Product E,Mechanic Team 7,2025-09-15 23:00:00,2025-09-15 23:30:00,30,1,310.5,50711.0,3rd,375
+E_69,69,Production,Task 69,Product E,Mechanic Team 4,2025-09-15 23:30:00,2025-09-16 00:00:00,30,1,255.75,48933.0,3rd,376
+E_147,147,Quality Inspection,QI for Task 47,Product E,Quality Team 1,2025-09-15 23:40:00,2025-09-16 00:25:00,45,1,260.5833333333333,-1000.0,1st,377
+E_81,81,Production,Task 81,Product E,Mechanic Team 7,2025-09-16 00:00:00,2025-09-16 00:20:00,20,1,280.75,49835.0,3rd,378
+E_85,85,Production,Task 85,Product E,Mechanic Team 7,2025-09-16 00:20:00,2025-09-16 01:00:00,40,1,297.4166666666667,49931.0,3rd,379
+C_65,65,Production,Task 65,Product C,Mechanic Team 5,2025-09-16 06:00:00,2025-09-16 06:20:00,20,1,224.0,49380.0,1st,380
+C_75,75,Production,Task 75,Product C,Mechanic Team 1,2025-09-16 06:00:00,2025-09-16 06:30:00,30,1,241.5,49781.0,1st,381
+E_82,82,Production,Task 82,Product E,Mechanic Team 1,2025-09-16 06:00:00,2025-09-16 07:00:00,60,2,275.25,49080.0,1st,382
+E_67,67,Production,Task 67,Product E,Mechanic Team 3,2025-09-16 06:00:00,2025-09-16 06:50:00,50,1,280.5,49432.0,1st,383
+E_58,58,Production,Task 58,Product E,Mechanic Team 5,2025-09-16 06:00:00,2025-09-16 07:00:00,60,2,281.5,48930.0,1st,384
+E_75,75,Production,Task 75,Product E,Mechanic Team 1,2025-09-16 06:00:00,2025-09-16 06:30:00,30,1,289.5,49761.0,1st,385
+C_73,73,Production,Task 73,Product C,Mechanic Team 3,2025-09-16 06:20:00,2025-09-16 06:40:00,20,1,245.16666666666666,49980.0,1st,386
+C_175,175,Quality Inspection,QI for Task 75,Product C,Quality Team 2,2025-09-16 06:30:00,2025-09-16 07:15:00,45,1,243.25,-1000.0,1st,387
+E_175,175,Quality Inspection,QI for Task 75,Product E,Quality Team 3,2025-09-16 06:30:00,2025-09-16 07:15:00,45,1,291.25,-1000.0,2nd,388
+C_90,90,Production,Task 90,Product C,Mechanic Team 3,2025-09-16 06:40:00,2025-09-16 07:40:00,60,2,249.83333333333334,50075.0,1st,389
+E_167,167,Quality Inspection,QI for Task 67,Product E,Quality Team 1,2025-09-16 06:50:00,2025-09-16 07:35:00,45,1,281.9166666666667,-1000.0,1st,390
+E_182,182,Quality Inspection,QI for Task 82,Product E,Quality Team 1,2025-09-16 07:00:00,2025-09-16 07:45:00,45,1,276.5,-1000.0,1st,391
+E_158,158,Quality Inspection,QI for Task 58,Product E,Quality Team 1,2025-09-16 07:00:00,2025-09-16 07:45:00,45,1,282.75,-1000.0,1st,392
+C_94,94,Production,Task 94,Product C,Mechanic Team 1,2025-09-16 07:15:00,2025-09-16 08:15:00,60,2,250.0,50150.0,1st,393
+E_94,94,Production,Task 94,Product E,Mechanic Team 1,2025-09-16 07:15:00,2025-09-16 08:15:00,60,2,298.0,50130.0,1st,394
+C_190,190,Quality Inspection,QI for Task 90,Product C,Quality Team 2,2025-09-16 07:40:00,2025-09-16 08:25:00,45,1,251.08333333333334,-1000.0,1st,395
+E_79,79,Production,Task 79,Product E,Mechanic Team 3,2025-09-16 07:45:00,2025-09-16 08:25:00,40,1,300.5,50534.0,1st,396
+C_100,100,Production,Task 100,Product C,Mechanic Team 5,2025-09-16 08:15:00,2025-09-16 09:45:00,90,3,253.5,50444.0,1st,397
+E_100,100,Production,Task 100,Product E,Mechanic Team 5,2025-09-16 08:15:00,2025-09-16 09:45:00,90,3,301.5,50424.0,1st,398
+C_200,200,Quality Inspection,QI for Task 100,Product C,Quality Team 2,2025-09-16 09:45:00,2025-09-16 10:30:00,45,2,254.25,-1000.0,1st,399
+E_200,200,Quality Inspection,QI for Task 100,Product E,Quality Team 1,2025-09-16 09:45:00,2025-09-16 10:30:00,45,2,302.25,-1000.0,1st,400
+C_74,74,Production,Task 74,Product C,Mechanic Team 6,2025-09-16 14:30:00,2025-09-16 15:30:00,60,2,232.0,49472.0,2nd,401
+E_70,70,Production,Task 70,Product E,Mechanic Team 6,2025-09-16 14:30:00,2025-09-16 15:30:00,60,2,257.0,48555.0,2nd,402
+E_57,57,Production,Task 57,Product E,Mechanic Team 6,2025-09-16 14:30:00,2025-09-16 14:50:00,20,1,274.25,49810.0,2nd,403
+E_86,86,Production,Task 86,Product E,Mechanic Team 2,2025-09-16 14:30:00,2025-09-16 15:30:00,60,2,285.5,49977.0,2nd,404
+E_77,77,Production,Task 77,Product E,Mechanic Team 2,2025-09-16 14:50:00,2025-09-16 15:40:00,50,1,290.9166666666667,50329.0,2nd,405
+E_170,170,Quality Inspection,QI for Task 70,Product E,Quality Team 1,2025-09-16 15:30:00,2025-09-16 16:15:00,45,1,258.25,-1000.0,1st,406
+C_93,93,Production,Task 93,Product C,Mechanic Team 7,2025-09-16 23:00:00,2025-09-16 23:40:00,40,1,238.5,50679.0,3rd,407
+C_91,91,Production,Task 91,Product C,Mechanic Team 7,2025-09-16 23:00:00,2025-09-16 23:30:00,30,1,238.5,50731.0,3rd,408
+C_89,89,Production,Task 89,Product C,Mechanic Team 7,2025-09-16 23:00:00,2025-09-16 23:20:00,20,1,240.0,50933.0,3rd,409
+E_83,83,Production,Task 83,Product E,Mechanic Team 7,2025-09-16 23:00:00,2025-09-16 23:30:00,30,1,276.5,49908.0,3rd,410
+E_87,87,Production,Task 87,Product E,Mechanic Team 7,2025-09-16 23:00:00,2025-09-16 23:50:00,50,1,280.5,50107.0,3rd,411
+E_93,93,Production,Task 93,Product E,Mechanic Team 7,2025-09-16 23:00:00,2025-09-16 23:40:00,40,1,286.5,50659.0,3rd,412
+E_95,95,Production,Task 95,Product E,Mechanic Team 7,2025-09-16 23:00:00,2025-09-16 23:30:00,30,1,286.75,50736.0,3rd,413
+E_89,89,Production,Task 89,Product E,Mechanic Team 7,2025-09-16 23:30:00,2025-09-16 23:50:00,20,1,287.5,50913.0,3rd,414
+E_195,195,Quality Inspection,QI for Task 95,Product E,Quality Team 2,2025-09-16 23:30:00,2025-09-17 00:15:00,45,1,288.5,-1000.0,1st,415
+E_187,187,Quality Inspection,QI for Task 87,Product E,Quality Team 2,2025-09-16 23:50:00,2025-09-17 00:35:00,45,1,281.9166666666667,-1000.0,1st,416
+E_97,97,Production,Task 97,Product E,Mechanic Team 7,2025-09-17 00:35:00,2025-09-17 00:55:00,20,1,287.4166666666667,51016.0,3rd,417
+E_78,78,Production,Task 78,Product E,Mechanic Team 5,2025-09-17 06:00:00,2025-09-17 07:00:00,60,2,270.5,49905.0,1st,418
+E_90,90,Production,Task 90,Product E,Mechanic Team 3,2025-09-17 06:00:00,2025-09-17 07:00:00,60,2,274.5,50055.0,1st,419
+E_178,178,Quality Inspection,QI for Task 78,Product E,Quality Team 2,2025-09-17 07:00:00,2025-09-17 07:45:00,45,1,271.75,-1000.0,1st,420
+E_190,190,Quality Inspection,QI for Task 90,Product E,Quality Team 2,2025-09-17 07:00:00,2025-09-17 07:45:00,45,1,275.75,-1000.0,1st,421
+E_98,98,Production,Task 98,Product E,Mechanic Team 2,2025-09-17 14:30:00,2025-09-17 15:30:00,60,2,271.25,50580.0,2nd,422
+E_198,198,Quality Inspection,QI for Task 98,Product E,Quality Team 1,2025-09-17 15:30:00,2025-09-17 16:15:00,45,1,272.5,-1000.0,1st,423
+E_99,99,Production,Task 99,Product E,Mechanic Team 7,2025-09-17 23:00:00,2025-09-17 23:50:00,50,1,265.0,50860.0,3rd,424
+C_310,310,Late Part,Late Part 310,Product C,Mechanic Team 3,2025-09-22 06:00:00,2025-09-22 07:30:00,90,1,86.0,-2000.0,1st,425
+C_67,67,Production,Task 67,Product C,Mechanic Team 3,2025-09-22 07:30:00,2025-09-22 08:20:00,50,1,87.0,49452.0,1st,426
+C_167,167,Quality Inspection,QI for Task 67,Product C,Quality Team 2,2025-09-22 08:20:00,2025-09-22 09:05:00,45,1,88.41666666666667,-1000.0,1st,427
+C_78,78,Production,Task 78,Product C,Mechanic Team 5,2025-09-22 09:05:00,2025-09-22 10:05:00,60,2,99.41666666666667,49925.0,1st,428
+C_178,178,Quality Inspection,QI for Task 78,Product C,Quality Team 1,2025-09-22 10:05:00,2025-09-22 10:50:00,45,1,100.66666666666667,-1000.0,1st,429
+C_77,77,Production,Task 77,Product C,Mechanic Team 2,2025-09-22 14:30:00,2025-09-22 15:20:00,50,1,99.25,50349.0,2nd,430
+C_98,98,Production,Task 98,Product C,Mechanic Team 2,2025-09-22 15:20:00,2025-09-22 16:20:00,60,2,102.41666666666667,50600.0,2nd,431
+C_198,198,Quality Inspection,QI for Task 98,Product C,Quality Team 2,2025-09-22 16:20:00,2025-09-22 17:05:00,45,1,103.66666666666667,-1000.0,1st,432
+C_99,99,Production,Task 99,Product C,Mechanic Team 7,2025-09-22 23:00:00,2025-09-22 23:50:00,50,1,97.0,50880.0,3rd,433
+C_97,97,Production,Task 97,Product C,Mechanic Team 7,2025-09-22 23:00:00,2025-09-22 23:20:00,20,1,97.0,51036.0,3rd,434
