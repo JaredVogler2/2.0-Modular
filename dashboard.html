@@ -24,7 +24,7 @@
         <div class="header">
             <h1>
                 <div class="icon">JV</div>
-                Production Dashboard
+                Production Dashboard (Modular Version)
             </h1>
             <div class="controls">
                 <div class="scenario-selector">
@@ -67,19 +67,24 @@
         </div>
     </div>
 
+    <!-- CORRECT MODULAR JAVASCRIPT PATHS - DO NOT USE updated-dashboard-js.js! -->
     <!-- Core JavaScript -->
     <script src="/static/js/core/event-bus.js"></script>
     <script src="/static/js/core/api-client.js"></script>
     <script src="/static/js/core/base-module.js"></script>
     <script src="/static/js/core/utils.js"></script>
-    
+
     <!-- Module JavaScript -->
     <script src="/static/js/modules/team-lead/team-lead.js"></script>
     <script src="/static/js/modules/management/management.js"></script>
     <script src="/static/js/modules/mechanic/mechanic.js"></script>
     <script src="/static/js/modules/project/project.js"></script>
-    
+
     <!-- Main App -->
     <script src="/static/js/core/app.js"></script>
+
+    <!-- DO NOT INCLUDE THESE OLD FILES! -->
+    <!-- <script src="/static/js/updated-dashboard-js.js"></script> DELETE THIS! -->
+    <!-- <script src="/static/js/app.js"></script> DELETE THIS! -->
 </body>
 </html>

@@ -1,1 +1,1 @@
-"""Services package"""
+"""API blueprints package"""
