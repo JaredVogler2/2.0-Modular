@@ -935,17 +935,25 @@ class ProductionScheduler:
         # Initialize start date
         start_date = datetime(2025, 8, 22, 6, 0)  # Start at 6 AM
 
-        # Create dependency graph
+        # Create dependency graph - FIXED to handle all constraint types
         dependencies = defaultdict(set)
         dependents = defaultdict(set)
+        constraint_types = defaultdict(dict)  # Store constraint type for each dependency
 
         for constraint in dynamic_constraints:
-            if constraint['Relationship'] in ['Finish <= Start', 'Finish = Start']:
-                dependencies[constraint['Second']].add(constraint['First'])
-                dependents[constraint['First']].add(constraint['Second'])
-            elif constraint['Relationship'] == 'Start <= Start':
-                dependencies[constraint['Second']].add(constraint['First'])
-                dependents[constraint['First']].add(constraint['Second'])
+            first = constraint['First']
+            second = constraint['Second']
+            relationship = constraint.get('Relationship', 'Finish <= Start')
+
+            # Store the relationship type
+            constraint_types[second][first] = relationship
+
+            # All constraint types create a dependency relationship
+            dependencies[second].add(first)
+            dependents[first].add(second)
+
+            if not silent_mode and relationship == 'Finish <= Finish':
+                print(f"[DEBUG] F<=F constraint: {first} must finish <= {second} finish")
 
         # Find tasks with no dependencies (can start immediately)
         all_tasks = set(self.tasks.keys())
@@ -963,10 +971,23 @@ class ProductionScheduler:
             for product, count in sorted(instances_per_product.items()):
                 print(f"- {product}: {count} instances")
 
+        # Only add tasks with truly no dependencies
         for task in all_tasks:
-            if task not in dependencies or len(dependencies[task]) == 0:
+            deps = dependencies.get(task, set())
+            # Filter out dependencies that don't exist (invalid constraints)
+            valid_deps = [d for d in deps if d in all_tasks]
+            if len(valid_deps) == 0:  # No dependencies at all
                 priority = self.calculate_task_priority(task)
                 heapq.heappush(ready_tasks, (priority, task))
+
+        # Right after the for loop that builds dependencies
+        if not silent_mode:
+            print(f"\n[DEBUG] Checking F<=F dependencies:")
+            for task_id in ['E_5', 'E_11', 'E_23', 'E_30']:
+                if task_id in dependencies:
+                    print(f"  {task_id} depends on: {dependencies[task_id]}")
+                else:
+                    print(f"  {task_id} has no dependencies")
 
         if not silent_mode:
             print(f"- Initial ready tasks: {len(ready_tasks)}")
@@ -981,21 +1002,35 @@ class ProductionScheduler:
         max_iterations = total_tasks * 10
         iteration_count = 0
 
-        while (ready_tasks or scheduled_count < total_tasks) and retry_count < max_retries and iteration_count < max_iterations:
+        # Track unscheduled tasks for debugging
+        unscheduled_tasks = all_tasks.copy()
+
+        while (
+                ready_tasks or scheduled_count < total_tasks) and retry_count < max_retries and iteration_count < max_iterations:
             iteration_count += 1
 
             if not ready_tasks and scheduled_count + len(failed_tasks) < total_tasks:
                 if not silent_mode:
-                    print(f"\n[DEBUG] No ready tasks but {total_tasks - scheduled_count - len(failed_tasks)} tasks remain unscheduled")
-                unscheduled = [t for t in all_tasks if t not in self.task_schedule and t not in failed_tasks]
+                    print(
+                        f"\n[DEBUG] No ready tasks but {total_tasks - scheduled_count - len(failed_tasks)} tasks remain unscheduled")
 
+                # Check for tasks whose dependencies are now all scheduled
                 newly_ready = []
-                for task in unscheduled:
-                    if task in failed_tasks:
+                for task in unscheduled_tasks:
+                    if task in self.task_schedule or task in failed_tasks:
                         continue
+
                     deps = dependencies.get(task, set())
-                    unscheduled_deps = [d for d in deps if d not in self.task_schedule and d not in failed_tasks]
-                    if len(unscheduled_deps) == 0:
+                    valid_deps = [d for d in deps if d in all_tasks]
+
+                    if all(d in self.task_schedule for d in valid_deps):
+                        # DEBUG: Check if this is one of our problem tasks
+                        if task in ['E_5', 'E_11', 'E_23', 'E_30'] and not silent_mode:
+                            print(f"[DEBUG] {task} is now ready! Dependencies satisfied:")
+                            for dep in valid_deps:
+                                dep_end = self.task_schedule[dep]['end_time']
+                                print(f"  - {dep} completed at {dep_end}")
+
                         priority = self.calculate_task_priority(task)
                         heapq.heappush(ready_tasks, (priority, task))
                         newly_ready.append(task)
@@ -1003,7 +1038,15 @@ class ProductionScheduler:
                 if newly_ready and not silent_mode:
                     print(f"[DEBUG] Found {len(newly_ready)} newly ready tasks")
                 elif not newly_ready and not silent_mode:
-                    print(f"\n[ERROR] No more tasks can be scheduled")
+                    print(f"\n[ERROR] No more tasks can be scheduled. Analyzing blockages...")
+                    blocked_count = 0
+                    for task in unscheduled_tasks:
+                        if task not in self.task_schedule and task not in failed_tasks:
+                            deps = dependencies.get(task, set())
+                            unscheduled_deps = [d for d in deps if d not in self.task_schedule and d in all_tasks]
+                            if unscheduled_deps and blocked_count < 5:
+                                print(f"  {task} blocked by: {unscheduled_deps}")
+                                blocked_count += 1
                     break
 
             if not ready_tasks:
@@ -1017,14 +1060,26 @@ class ProductionScheduler:
             if task_retry_counts[task_id] >= 3:
                 if task_id not in failed_tasks:
                     failed_tasks.add(task_id)
+                    unscheduled_tasks.discard(task_id)
                     if not silent_mode:
                         print(f"[WARNING] Task {task_id} failed too many times, skipping permanently")
+                continue
+
+            # Verify all dependencies are actually scheduled before proceeding
+            deps = dependencies.get(task_id, set())
+            valid_deps = [d for d in deps if d in all_tasks]
+            if not all(d in self.task_schedule for d in valid_deps):
+                unscheduled_deps = [d for d in valid_deps if d not in self.task_schedule]
+                if not silent_mode:
+                    print(f"[WARNING] Task {task_id} dependencies not satisfied: {unscheduled_deps}")
+                heapq.heappush(ready_tasks, (priority + 100, task_id))
                 continue
 
             if scheduled_count % 50 == 0 and not silent_mode:
                 task_type = self.tasks[task_id]['task_type']
                 product, task_num = self.parse_product_task_id(task_id)
-                print(f"\n[DEBUG] Scheduling {task_id} ({product} Task {task_num}, {task_type}, priority: {priority:.1f})")
+                print(
+                    f"\n[DEBUG] Scheduling {task_id} ({product} Task {task_num}, {task_type}, priority: {priority:.1f})")
 
             # Get product line for this task
             product_line = self.tasks[task_id].get('product_line')
@@ -1046,33 +1101,52 @@ class ProductionScheduler:
 
             # Find earliest available time considering dependencies
             earliest_start = current_time
+            latest_end = None  # For Finish <= Finish constraints
 
-            # Special handling for late part tasks - respect on-dock date
+            # Special handling for late part tasks
             if task_id in self.late_part_tasks:
                 late_part_earliest = self.get_earliest_start_for_late_part(task_id)
                 earliest_start = max(earliest_start, late_part_earliest)
                 if scheduled_count % 50 == 0 and not silent_mode:
                     print(f"[DEBUG]   Late part task, earliest start after on-dock: {late_part_earliest}")
 
-            # Check dependency constraints
+            # Check dependency constraints based on relationship type
             constraint_count = 0
-            for dep in dependencies.get(task_id, set()):
+            for dep in valid_deps:
                 if dep in self.task_schedule:
+                    dep_start = self.task_schedule[dep]['start_time']
                     dep_end = self.task_schedule[dep]['end_time']
                     constraint_count += 1
 
-                    # Check if this is a Finish = Start relationship
-                    is_finish_equals_start = False
-                    for constraint in dynamic_constraints:
-                        if (constraint['First'] == dep and
-                            constraint['Second'] == task_id and
-                            constraint['Relationship'] == 'Finish = Start'):
-                            is_finish_equals_start = True
-                            break
+                    # Get the relationship type
+                    relationship = constraint_types.get(task_id, {}).get(dep, 'Finish <= Start')
 
-                    if is_finish_equals_start:
+                    if relationship == 'Finish = Start':
+                        # Task must start exactly when dependency finishes
                         earliest_start = dep_end
-                    else:
+                        if scheduled_count % 50 == 0 and not silent_mode:
+                            print(f"[DEBUG]   F=S constraint: must start at {dep_end}")
+
+                    elif relationship == 'Start <= Start':
+                        # Task can start after dependency starts
+                        earliest_start = max(earliest_start, dep_start)
+                        if scheduled_count % 50 == 0 and not silent_mode:
+                            print(f"[DEBUG]   S<=S constraint: can start after {dep_start}")
+
+                    elif relationship == 'Finish <= Finish':
+                        # For F<=F: dep finish <= task_id finish
+                        # This means task_id must finish AFTER (or at same time as) dep finishes
+                        # So task_id must start no earlier than (dep_end - task_duration)
+                        min_start_for_ff = dep_end - timedelta(minutes=int(duration))
+                        earliest_start = max(earliest_start, min_start_for_ff)
+
+                        if scheduled_count % 50 == 0 and not silent_mode:
+                            print(f"[DEBUG]   F<=F constraint: {dep} finish <= {task_id} finish")
+                            print(f"[DEBUG]     {task_id} must finish after {dep_end}")
+                            print(f"[DEBUG]     Therefore {task_id} earliest start: {min_start_for_ff}")
+
+                    else:  # Default: Finish <= Start
+                        # Task can start after dependency finishes
                         earliest_start = max(earliest_start, dep_end)
 
             if scheduled_count % 50 == 0 and constraint_count > 0 and not silent_mode:
@@ -1092,6 +1166,7 @@ class ProductionScheduler:
                             temp_start, _ = self.get_next_working_time_with_capacity(
                                 earliest_start, product_line, temp_team, mechanics_needed,
                                 duration, is_quality=True)
+
                             if not scheduled_start or temp_start < scheduled_start:
                                 scheduled_start = temp_start
                                 team = temp_team
@@ -1105,6 +1180,7 @@ class ProductionScheduler:
                         heapq.heappush(ready_tasks, (priority + 0.1, task_id))
                     else:
                         failed_tasks.add(task_id)
+                        unscheduled_tasks.discard(task_id)
                     continue
             else:
                 team = task_info['team']
@@ -1112,12 +1188,14 @@ class ProductionScheduler:
                     scheduled_start, shift = self.get_next_working_time_with_capacity(
                         earliest_start, product_line, team, mechanics_needed,
                         duration, is_quality=False)
+
                 except Exception as e:
                     task_retry_counts[task_id] += 1
                     if task_retry_counts[task_id] < 3:
                         heapq.heappush(ready_tasks, (priority + 0.1, task_id))
                     else:
                         failed_tasks.add(task_id)
+                        unscheduled_tasks.discard(task_id)
                     continue
 
             # Schedule the task
@@ -1136,22 +1214,35 @@ class ProductionScheduler:
             }
 
             scheduled_count += 1
+            unscheduled_tasks.discard(task_id)
             retry_count = 0
 
             if scheduled_count % 50 == 0 and not silent_mode:
-                print(f"[DEBUG]   Scheduled: {scheduled_start.strftime('%Y-%m-%d %H:%M')} - {scheduled_end.strftime('%H:%M')} ({team}, {shift} shift)")
+                print(
+                    f"[DEBUG]   Scheduled: {scheduled_start.strftime('%Y-%m-%d %H:%M')} - {scheduled_end.strftime('%H:%M')} ({team}, {shift} shift)")
 
             # Progress reporting
             if scheduled_count % 100 == 0 and not silent_mode:
-                print(f"\n[PROGRESS] {scheduled_count}/{total_tasks} tasks scheduled ({scheduled_count/total_tasks*100:.1f}%)")
+                print(
+                    f"\n[PROGRESS] {scheduled_count}/{total_tasks} tasks scheduled ({scheduled_count / total_tasks * 100:.1f}%)")
 
             # Add newly ready tasks
             newly_ready = []
             for dependent in dependents.get(task_id, set()):
                 if dependent in self.task_schedule or dependent in failed_tasks:
                     continue
+
                 deps = dependencies.get(dependent, set())
-                if all(d in self.task_schedule or d in failed_tasks for d in deps):
+                valid_deps = [d for d in deps if d in all_tasks]
+
+                if all(d in self.task_schedule for d in valid_deps):
+                    # DEBUG: Check if this is one of our problem tasks
+                    if dependent in ['E_5', 'E_11', 'E_23', 'E_30'] and not silent_mode:
+                        print(f"[DEBUG] {dependent} is now ready! Dependencies satisfied:")
+                        for dep in valid_deps:
+                            dep_end = self.task_schedule[dep]['end_time']
+                            print(f"  - {dep} completed at {dep_end}")
+
                     priority = self.calculate_task_priority(dependent)
                     heapq.heappush(ready_tasks, (priority, dependent))
                     newly_ready.append(dependent)
@@ -1170,7 +1261,7 @@ class ProductionScheduler:
             for product in sorted(scheduled_by_product.keys()):
                 total = len(self.product_tasks[product])
                 scheduled = scheduled_by_product[product]
-                print(f"  {product}: {scheduled}/{total} ({scheduled/total*100:.1f}%)")
+                print(f"  {product}: {scheduled}/{total} ({scheduled / total * 100:.1f}%)")
 
             # Report task type breakdown
             scheduled_by_type = defaultdict(int)

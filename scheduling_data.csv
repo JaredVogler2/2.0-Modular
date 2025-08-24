@@ -307,21 +307,21 @@ Shift,Start Time,End Time,Duration
 
 ==== MECHANIC TEAM CAPACITY ====
 Mechanic Team,Total Capacity (People)
-Mechanic Team 1,10
-Mechanic Team 2,10
-Mechanic Team 3,10
-Mechanic Team 4,10
-Mechanic Team 5,10
-Mechanic Team 6,10
-Mechanic Team 7,10
+Mechanic Team 1,99
+Mechanic Team 2,99
+Mechanic Team 3,99
+Mechanic Team 4,99
+Mechanic Team 5,99
+Mechanic Team 6,99
+Mechanic Team 7,99
 
 ==== PRODUCT LINE DELIVERY SCHEDULE ====
 Product Line,Delivery Date
-Product A,September 20 2025
-Product B,September 26 2025
-Product C,September 29 2025
-Product D,October 5 2025
-Product E,October 1 2025
+Product A,September 20 2026
+Product B,September 26 2026
+Product C,September 29 2026
+Product D,October 5 2026
+Product E,October 1 2026
 
 ==== PRODUCT LINE JOBS ====
 Product Line,Task Start,Task End
@@ -407,10 +407,10 @@ Primary Task,Quality Task,Quality Headcount Required,Quality Duration (minutes)
 
 ==== QUALITY TEAM CAPACITY ====
 Quality Team,Total Capacity (People)
-Quality Team 1,3
-Quality Team 2,3
-Quality Team 3,3
-Quality Team 4,3
+Quality Team 1,9999
+Quality Team 2,9999
+Quality Team 3,9999
+Quality Team 4,9999
 
 ==== QUALITY TEAM WORKING CALENDARS ====
 Quality Team,Working Shifts
