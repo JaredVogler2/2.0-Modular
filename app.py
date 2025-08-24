@@ -8,8 +8,6 @@ from backend.api import scenarios, teams, tasks, analytics, assignments
 from backend.services.scheduler_service import SchedulerService
 import logging
 from datetime import datetime
-# At the TOP of your app.py, right after imports, add this:
-
 import os
 import sys
 
@@ -31,11 +29,10 @@ if "PythonProject2-Aurora2.0-Modular" not in current_dir:
     sys.exit(1)
 
 # Now create Flask app with absolute paths
-from flask import Flask, render_template, jsonify
-
 app = Flask(__name__,
             static_folder=os.path.join(FORCE_DIR, 'static'),
-            template_folder=os.path.join(FORCE_DIR, 'templates'))
+            template_folder=os.path.join(FORCE_DIR, 'templates'),
+            static_url_path='/static')  # Explicitly set the URL path
 
 print(f"[APP] Static folder: {app.static_folder}")
 print(f"[APP] Template folder: {app.template_folder}")
@@ -70,8 +67,7 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-# Create Flask app
-app = Flask(__name__)
+# Configure Flask app
 app.config.from_object(config)
 CORS(app)
 
@@ -87,7 +83,6 @@ def initialize_app():
         SchedulerService.get_instance().clear_all_scenarios()  # Clear old cached results
         logger.info("Scheduler service initialized successfully")
         initialized = True
-
 
 # Register blueprints
 app.register_blueprint(scenarios.scenarios_bp)
@@ -109,7 +104,6 @@ def health_check():
         'timestamp': datetime.now().isoformat()
     })
 
-
 # Direct routes for Gantt chart - ALWAYS FRESH
 @app.route('/baseline')
 def get_baseline():
@@ -128,7 +122,6 @@ def get_baseline():
 
     return jsonify({'data': data, 'tasks': data})
 
-
 @app.route('/scenario1')
 def get_scenario1():
     """Direct scenario1 route for Gantt chart - always generates fresh schedule"""
@@ -141,7 +134,6 @@ def get_scenario1():
 
     print(f"[APP] Generated {len(data)} tasks for scenario1")
     return jsonify({'data': data, 'tasks': data})
-
 
 @app.route('/scenario2')
 def get_scenario2():
@@ -156,7 +148,6 @@ def get_scenario2():
     print(f"[APP] Generated {len(data)} tasks for scenario2")
     return jsonify({'data': data, 'tasks': data})
 
-
 @app.route('/scenario3')
 def get_scenario3():
     """Direct scenario3 route for Gantt chart - always generates fresh schedule"""
@@ -170,14 +161,10 @@ def get_scenario3():
     print(f"[APP] Generated {len(data)} tasks for scenario3")
     return jsonify({'data': data, 'tasks': data})
 
-
-# Add this debug route to your app.py to verify file paths
-
+# Debug routes
 @app.route('/debug/paths')
 def debug_paths():
     """Debug endpoint to check what files Flask is serving"""
-    import os
-
     base_dir = os.path.dirname(os.path.abspath(__file__))
     static_dir = app.static_folder
     template_dir = app.template_folder
@@ -232,7 +219,6 @@ def debug_paths():
         'correct_project': 'PythonProject2-Aurora2.0-Modular' in base_dir,
         'url_map': [str(rule) for rule in app.url_map.iter_rules()]
     })
-
 
 @app.route('/debug/static-test')
 def debug_static_test():
@@ -377,6 +363,27 @@ def debug_schedule():
         'constraint_satisfied': 'Check times above'
     })
 
+
+@app.route('/test-template')
+def test_template():
+    import hashlib
+    with open(os.path.join(app.template_folder, 'dashboard.html'), 'r') as f:
+        content = f.read()
+
+    # Check what's in the template
+    has_modular = 'modules/project/project.js' in content
+    has_old = 'updated-dashboard-js.js' in content
+
+    return f"""
+    <h1>Template Debug Info</h1>
+    <p>Template folder: {app.template_folder}</p>
+    <p>File size: {len(content)} bytes</p>
+    <p>Has modular scripts: {has_modular}</p>
+    <p>Has old script: {has_old}</p>
+    <p>MD5 hash: {hashlib.md5(content.encode()).hexdigest()}</p>
+    <pre>Last 500 chars: {content[-500:]}</pre>
+    """
+
 @app.errorhandler(404)
 def not_found(error):
     return jsonify({'error': 'Not found'}), 404
@@ -385,7 +392,6 @@ def not_found(error):
 def internal_error(error):
     logger.error(f"Internal error: {error}")
     return jsonify({'error': 'Internal server error'}), 500
-
 
 if __name__ == '__main__':
     initialize_app()
