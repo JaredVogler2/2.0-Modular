@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Dashboard - Modular</title>
+    
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/static/css/base.css">
+    
+    <!-- Module CSS -->
+    <link rel="stylesheet" href="/static/css/modules/team-lead.css">
+    <link rel="stylesheet" href="/static/css/modules/management.css">
+    <link rel="stylesheet" href="/static/css/modules/mechanic.css">
+    <link rel="stylesheet" href="/static/css/modules/project.css">
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frappe-gantt@0.5.0/dist/frappe-gantt.css">
+    <script src="https://cdn.jsdelivr.net/npm/frappe-gantt@0.5.0/dist/frappe-gantt.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>
+                <div class="icon">JV</div>
+                Production Dashboard
+            </h1>
+            <div class="controls">
+                <div class="scenario-selector">
+                    <label>Scenario:</label>
+                    <select id="scenarioSelect">
+                        <option value="baseline">Baseline</option>
+                        <option value="scenario1">Scenario 1</option>
+                        <option value="scenario2">Scenario 2</option>
+                        <option value="scenario3">Scenario 3</option>
+                    </select>
+                </div>
+                <div class="view-tabs">
+                    <button class="view-tab active" data-view="team-lead">Team Lead</button>
+                    <button class="view-tab" data-view="management">Management</button>
+                    <button class="view-tab" data-view="mechanic">Individual</button>
+                    <button class="view-tab" data-view="project">Project</button>
+                </div>
+                <button id="refreshBtn" class="btn btn-secondary">🔄 Refresh</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Module containers -->
+            <div id="team-lead-view" class="view-content module-container active">
+                <!-- Team Lead Module will populate this -->
+            </div>
+
+            <div id="management-view" class="view-content module-container">
+                <!-- Management Module will populate this -->
+            </div>
+
+            <div id="mechanic-view" class="view-content module-container">
+                <!-- Mechanic Module will populate this -->
+            </div>
+
+            <div id="project-view" class="view-content module-container">
+                <!-- Project Module will populate this -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Core JavaScript -->
+    <script src="/static/js/core/event-bus.js"></script>
+    <script src="/static/js/core/api-client.js"></script>
+    <script src="/static/js/core/base-module.js"></script>
+    <script src="/static/js/core/utils.js"></script>
+    
+    <!-- Module JavaScript -->
+    <script src="/static/js/modules/team-lead/team-lead.js"></script>
+    <script src="/static/js/modules/management/management.js"></script>
+    <script src="/static/js/modules/mechanic/mechanic.js"></script>
+    <script src="/static/js/modules/project/project.js"></script>
+    
+    <!-- Main App -->
+    <script src="/static/js/core/app.js"></script>
+</body>
+</html>
